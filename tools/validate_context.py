@@ -28,6 +28,7 @@ REQUIRED = [
 
 ARXIV_VERSION_RE = re.compile(r"^v[1-9][0-9]*$")
 ARXIV_SOURCE_CLASSES = {"arxiv", "journal_and_arxiv"}
+ARXIV_URL_PREFIX = "https://arxiv.org/abs/"
 
 
 def reject_non_json_constant(value: str) -> None:
@@ -130,7 +131,7 @@ def main() -> None:
             version = item.get("arxiv_version")
             require(isinstance(arxiv_id, str) and arxiv_id, f"arXiv-class source missing arxiv id: {source_id}")
             require(isinstance(version, str) and ARXIV_VERSION_RE.fullmatch(version), f"arXiv-class source missing valid version: {source_id}")
-            expected_url = f"https://arxiv.org/abs/{arxiv_id}{version}"
+            expected_url = f"{ARXIV_URL_PREFIX}{arxiv_id}{version}"
             require(item.get("url") == expected_url, f"arXiv-class source URL is not pinned to exact revision: {source_id}")
         else:
             require("arxiv" not in item and "arxiv_version" not in item, f"non-arXiv source carries arXiv metadata without an arXiv source class: {source_id}")
@@ -148,20 +149,40 @@ def main() -> None:
     for item in publications:
         publication_id = item["id"]
         source = source_by_id[publication_id]
+        source_is_arxiv = source.get("class") in ARXIV_SOURCE_CLASSES
+        publication_url = item.get("url")
+        publication_has_arxiv_metadata = (
+            "arxiv" in item
+            or "arxiv_version" in item
+            or (isinstance(publication_url, str) and publication_url.startswith(ARXIV_URL_PREFIX))
+        )
+
         state = item.get("epistemic_state")
         require(state in epistemic_states, f"publication uses undefined epistemic state: {publication_id} -> {state}")
         require(state == "cached_public_record", f"static publication summary must be cached_public_record: {publication_id}")
 
-        if source.get("class") in ARXIV_SOURCE_CLASSES:
+        # Validate publication-side arXiv claims because they are claims in their
+        # own right. Do not let a later source-class edit disable these checks.
+        if publication_has_arxiv_metadata:
+            require(
+                source_is_arxiv,
+                f"publication carries arXiv metadata but backing source is not arXiv-class: {publication_id}",
+            )
             arxiv_id = item.get("arxiv")
             version = item.get("arxiv_version")
-            require(isinstance(arxiv_id, str) and arxiv_id, f"arXiv-backed publication missing arxiv id: {publication_id}")
-            require(isinstance(version, str) and ARXIV_VERSION_RE.fullmatch(version), f"arXiv-backed publication missing valid version: {publication_id}")
-            expected_url = f"https://arxiv.org/abs/{arxiv_id}{version}"
-            require(item.get("url") == expected_url, f"publication URL is not pinned to exact arXiv revision: {publication_id}")
+            require(isinstance(arxiv_id, str) and arxiv_id, f"publication missing arxiv id: {publication_id}")
+            require(isinstance(version, str) and ARXIV_VERSION_RE.fullmatch(version), f"publication missing valid arXiv version: {publication_id}")
+            expected_url = f"{ARXIV_URL_PREFIX}{arxiv_id}{version}"
+            require(publication_url == expected_url, f"publication URL is not pinned to exact arXiv revision: {publication_id}")
             require(source.get("arxiv") == arxiv_id, f"publication/source arXiv id mismatch: {publication_id}")
             require(source.get("arxiv_version") == version, f"publication/source arXiv version mismatch: {publication_id}")
-            require(source.get("url") == item.get("url"), f"publication/source URL mismatch: {publication_id}")
+        else:
+            require(
+                not source_is_arxiv,
+                f"arXiv-backed publication is missing publication-side arXiv metadata: {publication_id}",
+            )
+
+        require(source.get("url") == publication_url, f"publication/source URL mismatch: {publication_id}")
 
     profile = load_json("profiles/sabine-public.json")
     require_timestamp_date(profile, "last_verified", "last_verified_at", "Sabine public profile")
