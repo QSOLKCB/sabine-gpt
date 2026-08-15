@@ -3,6 +3,7 @@
   "protocol": "SABINE-GPT-PUBLIC-CONTEXT",
   "schema_version": "1.0.0",
   "snapshot_date": "2026-08-16",
+  "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
   "visibility": "public",
   "purpose": "smallest-sufficient, evidence-first mathematical and foundations-of-physics context",
   "load_order": [

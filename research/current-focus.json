@@ -4,6 +4,7 @@
   "schema_version": "1.0.0",
   "visibility": "public",
   "snapshot_date": "2026-08-16",
+  "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
   "basis": ["source.sabine.official.research", "source.sabine.mcmp", "paper.2510.11037"],
   "focus_areas": [
     {
@@ -36,5 +37,6 @@
     }
   ],
   "routing_rule": "Load only the focus areas materially relevant to the current question; do not assume every historical research topic is current priority.",
-  "last_verified": "2026-08-16"
+  "last_verified": "2026-08-16",
+  "last_verified_at": "2026-08-16T05:51:00+09:30"
 }
