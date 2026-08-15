@@ -1,0 +1,80 @@
+{
+  "type": "sabine-gpt-public-source-registry",
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-08-16",
+  "sources": [
+    {
+      "id": "source.sabine.official.home",
+      "class": "author_official_public_site",
+      "url": "https://sabinehossenfelder.com/",
+      "supports": ["public_roles", "research_scope", "science_communication_role"]
+    },
+    {
+      "id": "source.sabine.official.research",
+      "class": "author_official_public_site",
+      "url": "https://sabinehossenfelder.com/research-2/",
+      "supports": ["research_scope", "publication_count_context"]
+    },
+    {
+      "id": "source.sabine.mcmp",
+      "class": "public_institutional_profile",
+      "url": "https://www.mcmp.philosophie.uni-muenchen.de/people/external_members/hossenfelder_sabine/index.html",
+      "supports": ["current_research_focus", "external_membership", "research_history"]
+    },
+    {
+      "id": "paper.2510.11037",
+      "class": "arxiv",
+      "url": "https://arxiv.org/abs/2510.11037",
+      "supports": ["gravity_collapse", "locality", "testability", "superdeterministic_setting"]
+    },
+    {
+      "id": "paper.2309.12293",
+      "class": "arxiv",
+      "url": "https://arxiv.org/abs/2309.12293",
+      "doi": "10.1098/rspa.2023.0779",
+      "supports": ["taxonomy", "superdeterminism", "retrocausality", "future_input_dependence"]
+    },
+    {
+      "id": "paper.2309.12299",
+      "class": "arxiv",
+      "url": "https://arxiv.org/abs/2309.12299",
+      "supports": ["quantum_foundations", "locality", "interpretation_claims"]
+    },
+    {
+      "id": "paper.2211.01331",
+      "class": "journal_and_arxiv",
+      "url": "https://arxiv.org/abs/2211.01331",
+      "journal_url": "https://www.nature.com/articles/s41567-022-01831-5",
+      "doi": "10.1038/s41567-022-01831-5",
+      "supports": ["bell_theorem", "locality", "statistical_independence"]
+    },
+    {
+      "id": "paper.2206.10445",
+      "class": "journal_and_arxiv",
+      "url": "https://arxiv.org/abs/2206.10445",
+      "doi": "10.1088/2399-6528/ac96cf",
+      "supports": ["measurement_problem"]
+    },
+    {
+      "id": "paper.2206.10619",
+      "class": "journal_and_arxiv",
+      "url": "https://arxiv.org/abs/2206.10619",
+      "doi": "10.1103/PhysRevA.109.026201",
+      "supports": ["finetuning", "overfitting", "superdeterminism", "experimental_discrimination"]
+    },
+    {
+      "id": "paper.2110.07168",
+      "class": "journal_and_arxiv",
+      "url": "https://arxiv.org/abs/2110.07168",
+      "doi": "10.1016/j.aop.2022.168827",
+      "supports": ["future_input_dependence", "path_integral", "wavefunction_collapse"]
+    },
+    {
+      "id": "paper.2010.01327",
+      "class": "journal_and_arxiv",
+      "url": "https://arxiv.org/abs/2010.01327",
+      "doi": "10.1103/PhysRevA.106.022212",
+      "supports": ["local_deterministic_model", "statistical_independence", "wavefunction_collapse"]
+    }
+  ]
+}
