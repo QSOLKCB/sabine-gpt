@@ -11,7 +11,8 @@
       "year": 2025,
       "status": "arxiv_preprint",
       "arxiv": "2510.11037",
-      "url": "https://arxiv.org/abs/2510.11037",
+      "arxiv_version": "v1",
+      "url": "https://arxiv.org/abs/2510.11037v1",
       "relevance": ["quantum_gravity", "measurement_problem", "locality", "collapse", "testability"],
       "summary": "Presents a phenomenological argument that a fundamental matter-geometry theory can produce an effective local, parameter-free collapse model with testable predictions."
     },
@@ -22,9 +23,10 @@
       "year": 2024,
       "status": "published",
       "arxiv": "2309.12293",
+      "arxiv_version": "v2",
       "journal": "Proceedings of the Royal Society A 480, 20230779 (2024)",
       "doi": "10.1098/rspa.2023.0779",
-      "url": "https://arxiv.org/abs/2309.12293",
+      "url": "https://arxiv.org/abs/2309.12293v2",
       "relevance": ["taxonomy", "superdeterminism", "retrocausality", "future_input_dependence", "quantum_foundations"],
       "summary": "Defines a structured vocabulary for models beyond standard quantum mechanics and clarifies distinctions among superdeterministic, retrocausal, future-input-dependent, atemporal, and related approaches."
     },
@@ -35,7 +37,8 @@
       "year": 2024,
       "status": "arxiv_preprint_revised_2024",
       "arxiv": "2309.12299",
-      "url": "https://arxiv.org/abs/2309.12299",
+      "arxiv_version": "v2",
+      "url": "https://arxiv.org/abs/2309.12299v2",
       "relevance": ["quantum_foundations", "locality", "interpretations", "instrumental_analysis"],
       "summary": "Uses an instrumental approach and the newer taxonomy to examine common claims about quantum interpretations, especially claims involving locality."
     },
@@ -46,9 +49,10 @@
       "year": 2022,
       "status": "published",
       "arxiv": "2211.01331",
+      "arxiv_version": "v2",
       "journal": "Nature Physics 18, 1382 (2022)",
       "doi": "10.1038/s41567-022-01831-5",
-      "url": "https://arxiv.org/abs/2211.01331",
+      "url": "https://arxiv.org/abs/2211.01331v2",
       "relevance": ["bell_theorem", "locality", "statistical_independence"],
       "summary": "Emphasizes that Bell-type conclusions depend on statistical-independence assumptions and that locally causal completions remain possible if those assumptions are relaxed."
     },
@@ -59,9 +63,10 @@
       "year": 2022,
       "status": "published",
       "arxiv": "2206.10445",
+      "arxiv_version": "v3",
       "journal": "Journal of Physics Communications 6, 102001 (2022)",
       "doi": "10.1088/2399-6528/ac96cf",
-      "url": "https://arxiv.org/abs/2206.10445",
+      "url": "https://arxiv.org/abs/2206.10445v3",
       "relevance": ["measurement_problem", "quantum_foundations"],
       "summary": "Separates different aspects of the measurement problem and states properties a theory would need in order to count as a solution rather than merely an interpretation."
     },
@@ -75,7 +80,7 @@
       "arxiv_version": "v4",
       "journal": "Physical Review A 109, 026201 (2024)",
       "doi": "10.1103/PhysRevA.109.026201",
-      "url": "https://arxiv.org/abs/2206.10619",
+      "url": "https://arxiv.org/abs/2206.10619v4",
       "relevance": ["superdeterminism", "fine_tuning", "overfitting", "experimental_discrimination"],
       "summary": "Argues that broad superdeterministic model classes are not adequately assessed by restricted statistical-model examples and treats overfitting as the operationally relevant notion of fine-tuning."
     },
@@ -86,9 +91,10 @@
       "year": 2022,
       "status": "published",
       "arxiv": "2110.07168",
+      "arxiv_version": "v1",
       "journal": "Annals of Physics 440, 168827 (2022)",
       "doi": "10.1016/j.aop.2022.168827",
-      "url": "https://arxiv.org/abs/2110.07168",
+      "url": "https://arxiv.org/abs/2110.07168v1",
       "relevance": ["future_input_dependence", "path_integral", "collapse"],
       "summary": "Constructs a path integral over Hilbert space that reproduces quantum mechanics and provides a framework that can be modified to include wavefunction collapse."
     },
@@ -102,7 +108,7 @@
       "arxiv_version": "v5",
       "journal": "Physical Review A 106, 022212 (2022)",
       "doi": "10.1103/PhysRevA.106.022212",
-      "url": "https://arxiv.org/abs/2010.01327",
+      "url": "https://arxiv.org/abs/2010.01327v5",
       "relevance": ["local_deterministic_model", "collapse", "statistical_independence", "no_signalling"],
       "summary": "Provides a concrete local deterministic toy model that reproduces quantum predictions after averaging hidden variables while violating statistical independence."
     }
