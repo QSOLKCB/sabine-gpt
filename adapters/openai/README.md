@@ -6,8 +6,12 @@ This directory contains transport guidance only. It does not redefine canonical 
 
 1. `README4AI.md`
 2. `ai/bootstrap.json`
-3. the files listed by `ai/bootstrap.json` in order
-4. only the task-relevant paper metadata or source material needed for the current problem
+3. the mandatory contract files listed by `ai/bootstrap.json` in `load_order`
+4. classify the task
+5. load only the smallest sufficient optional set from `routed_records`
+6. retrieve only the task-relevant primary paper/source material needed for the current problem
+
+A pure mathematics request should not load biography, current-focus data, or the publication registry merely because those records exist.
 
 ## Behavioural contract
 
