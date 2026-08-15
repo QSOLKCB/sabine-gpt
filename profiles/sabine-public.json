@@ -1,0 +1,39 @@
+{
+  "id": "profile.sabine_hossenfelder.public",
+  "record_type": "public_research_profile",
+  "schema_version": "1.0.0",
+  "visibility": "public",
+  "canonical_name": "Sabine Hossenfelder",
+  "scope": "research-relevant public information only",
+  "claims": [
+    {
+      "claim": "Sabine Hossenfelder is a physicist, author, and content creator.",
+      "epistemic_state": "retrieved",
+      "sources": ["source.sabine.official.home"]
+    },
+    {
+      "claim": "Her public research page states that her current work is mostly in the foundations of physics.",
+      "epistemic_state": "retrieved",
+      "sources": ["source.sabine.official.research"]
+    },
+    {
+      "claim": "Her MCMP public profile describes current research interests focused on locality and fine-tuning in theory development, including superdeterministic approaches and how they can be experimentally tested.",
+      "epistemic_state": "retrieved",
+      "sources": ["source.sabine.mcmp"]
+    },
+    {
+      "claim": "Her public research history spans quantum gravity, particle physics, cosmology, astrophysics, statistical mechanics, and quantum foundations.",
+      "epistemic_state": "retrieved",
+      "sources": ["source.sabine.official.research", "source.sabine.mcmp"]
+    }
+  ],
+  "non_goals": [
+    "private biography",
+    "family or personal relationships",
+    "private correspondence",
+    "political or personal preference inference",
+    "unpublished beliefs",
+    "personality emulation"
+  ],
+  "last_verified": "2026-08-16"
+}
