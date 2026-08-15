@@ -1,0 +1,110 @@
+{
+  "type": "sabine-gpt-publication-index",
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-08-16",
+  "selection_policy": "papers most relevant to publicly described current work in locality, fine-tuning, quantum foundations, the measurement problem, superdeterminism, testability, and quantum-gravity-linked collapse",
+  "publications": [
+    {
+      "id": "paper.2510.11037",
+      "title": "How Gravity Can Explain the Collapse of the Wavefunction",
+      "authors": ["Sabine Hossenfelder"],
+      "year": 2025,
+      "status": "arxiv_preprint",
+      "arxiv": "2510.11037",
+      "url": "https://arxiv.org/abs/2510.11037",
+      "relevance": ["quantum_gravity", "measurement_problem", "locality", "collapse", "testability"],
+      "summary": "Presents a phenomenological argument that a fundamental matter-geometry theory can produce an effective local, parameter-free collapse model with testable predictions."
+    },
+    {
+      "id": "paper.2309.12293",
+      "title": "Taxonomy for Physics Beyond Quantum Mechanics",
+      "authors": ["Emily Adlam", "Jonte R. Hance", "Sabine Hossenfelder", "Tim N. Palmer"],
+      "year": 2024,
+      "status": "published",
+      "arxiv": "2309.12293",
+      "journal": "Proceedings of the Royal Society A 480, 20230779 (2024)",
+      "doi": "10.1098/rspa.2023.0779",
+      "url": "https://arxiv.org/abs/2309.12293",
+      "relevance": ["taxonomy", "superdeterminism", "retrocausality", "future_input_dependence", "quantum_foundations"],
+      "summary": "Defines a structured vocabulary for models beyond standard quantum mechanics and clarifies distinctions among superdeterministic, retrocausal, future-input-dependent, atemporal, and related approaches."
+    },
+    {
+      "id": "paper.2309.12299",
+      "title": "Quantum Confusions, Cleared Up (or so I hope)",
+      "authors": ["Sabine Hossenfelder"],
+      "year": 2024,
+      "status": "arxiv_preprint_revised_2024",
+      "arxiv": "2309.12299",
+      "url": "https://arxiv.org/abs/2309.12299",
+      "relevance": ["quantum_foundations", "locality", "interpretations", "instrumental_analysis"],
+      "summary": "Uses an instrumental approach and the newer taxonomy to examine common claims about quantum interpretations, especially claims involving locality."
+    },
+    {
+      "id": "paper.2211.01331",
+      "title": "Bell's theorem allows local theories of quantum mechanics",
+      "authors": ["Jonte R. Hance", "Sabine Hossenfelder"],
+      "year": 2022,
+      "status": "published",
+      "arxiv": "2211.01331",
+      "journal": "Nature Physics 18, 1382 (2022)",
+      "doi": "10.1038/s41567-022-01831-5",
+      "url": "https://arxiv.org/abs/2211.01331",
+      "relevance": ["bell_theorem", "locality", "statistical_independence"],
+      "summary": "Emphasizes that Bell-type conclusions depend on statistical-independence assumptions and that locally causal completions remain possible if those assumptions are relaxed."
+    },
+    {
+      "id": "paper.2206.10445",
+      "title": "What does it take to solve the measurement problem?",
+      "authors": ["Jonte R. Hance", "Sabine Hossenfelder"],
+      "year": 2022,
+      "status": "published",
+      "arxiv": "2206.10445",
+      "journal": "Journal of Physics Communications 6, 102001 (2022)",
+      "doi": "10.1088/2399-6528/ac96cf",
+      "url": "https://arxiv.org/abs/2206.10445",
+      "relevance": ["measurement_problem", "quantum_foundations"],
+      "summary": "Separates different aspects of the measurement problem and states properties a theory would need in order to count as a solution rather than merely an interpretation."
+    },
+    {
+      "id": "paper.2206.10619",
+      "title": "Comment on \"Experimentally adjudicating between different causal accounts of Bell-inequality violations via statistical model selection\"",
+      "authors": ["Jonte R. Hance", "Sabine Hossenfelder"],
+      "year": 2024,
+      "status": "published",
+      "arxiv": "2206.10619",
+      "arxiv_version": "v4",
+      "journal": "Physical Review A 109, 026201 (2024)",
+      "doi": "10.1103/PhysRevA.109.026201",
+      "url": "https://arxiv.org/abs/2206.10619",
+      "relevance": ["superdeterminism", "fine_tuning", "overfitting", "experimental_discrimination"],
+      "summary": "Argues that broad superdeterministic model classes are not adequately assessed by restricted statistical-model examples and treats overfitting as the operationally relevant notion of fine-tuning."
+    },
+    {
+      "id": "paper.2110.07168",
+      "title": "A Future-Input Dependent Path Integral for Quantum Mechanics",
+      "authors": ["Sandro Donadi", "Sabine Hossenfelder"],
+      "year": 2022,
+      "status": "published",
+      "arxiv": "2110.07168",
+      "journal": "Annals of Physics 440, 168827 (2022)",
+      "doi": "10.1016/j.aop.2022.168827",
+      "url": "https://arxiv.org/abs/2110.07168",
+      "relevance": ["future_input_dependence", "path_integral", "collapse"],
+      "summary": "Constructs a path integral over Hilbert space that reproduces quantum mechanics and provides a framework that can be modified to include wavefunction collapse."
+    },
+    {
+      "id": "paper.2010.01327",
+      "title": "A Toy Model for Local and Deterministic Wave-function Collapse",
+      "authors": ["Sandro Donadi", "Sabine Hossenfelder"],
+      "year": 2022,
+      "status": "published",
+      "arxiv": "2010.01327",
+      "arxiv_version": "v5",
+      "journal": "Physical Review A 106, 022212 (2022)",
+      "doi": "10.1103/PhysRevA.106.022212",
+      "url": "https://arxiv.org/abs/2010.01327",
+      "relevance": ["local_deterministic_model", "collapse", "statistical_independence", "no_signalling"],
+      "summary": "Provides a concrete local deterministic toy model that reproduces quantum predictions after averaging hidden variables while violating statistical independence."
+    }
+  ]
+}
