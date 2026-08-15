@@ -2,6 +2,7 @@
   "type": "sabine-gpt-publication-index",
   "schema_version": "1.0.0",
   "snapshot_date": "2026-08-16",
+  "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
   "selection_policy": "papers most relevant to publicly described current work in locality, fine-tuning, quantum foundations, the measurement problem, superdeterminism, testability, and quantum-gravity-linked collapse",
   "publications": [
     {
@@ -14,6 +15,7 @@
       "arxiv_version": "v1",
       "url": "https://arxiv.org/abs/2510.11037v1",
       "relevance": ["quantum_gravity", "measurement_problem", "locality", "collapse", "testability"],
+      "epistemic_state": "cached_public_record",
       "summary": "Presents a phenomenological argument that a fundamental matter-geometry theory can produce an effective local, parameter-free collapse model with testable predictions."
     },
     {
@@ -28,6 +30,7 @@
       "doi": "10.1098/rspa.2023.0779",
       "url": "https://arxiv.org/abs/2309.12293v2",
       "relevance": ["taxonomy", "superdeterminism", "retrocausality", "future_input_dependence", "quantum_foundations"],
+      "epistemic_state": "cached_public_record",
       "summary": "Defines a structured vocabulary for models beyond standard quantum mechanics and clarifies distinctions among superdeterministic, retrocausal, future-input-dependent, atemporal, and related approaches."
     },
     {
@@ -40,6 +43,7 @@
       "arxiv_version": "v2",
       "url": "https://arxiv.org/abs/2309.12299v2",
       "relevance": ["quantum_foundations", "locality", "interpretations", "instrumental_analysis"],
+      "epistemic_state": "cached_public_record",
       "summary": "Uses an instrumental approach and the newer taxonomy to examine common claims about quantum interpretations, especially claims involving locality."
     },
     {
@@ -54,6 +58,7 @@
       "doi": "10.1038/s41567-022-01831-5",
       "url": "https://arxiv.org/abs/2211.01331v2",
       "relevance": ["bell_theorem", "locality", "statistical_independence"],
+      "epistemic_state": "cached_public_record",
       "summary": "Emphasizes that Bell-type conclusions depend on statistical-independence assumptions and that locally causal completions remain possible if those assumptions are relaxed."
     },
     {
@@ -68,6 +73,7 @@
       "doi": "10.1088/2399-6528/ac96cf",
       "url": "https://arxiv.org/abs/2206.10445v3",
       "relevance": ["measurement_problem", "quantum_foundations"],
+      "epistemic_state": "cached_public_record",
       "summary": "Separates different aspects of the measurement problem and states properties a theory would need in order to count as a solution rather than merely an interpretation."
     },
     {
@@ -82,6 +88,7 @@
       "doi": "10.1103/PhysRevA.109.026201",
       "url": "https://arxiv.org/abs/2206.10619v4",
       "relevance": ["superdeterminism", "fine_tuning", "overfitting", "experimental_discrimination"],
+      "epistemic_state": "cached_public_record",
       "summary": "Argues that broad superdeterministic model classes are not adequately assessed by restricted statistical-model examples and treats overfitting as the operationally relevant notion of fine-tuning."
     },
     {
@@ -96,6 +103,7 @@
       "doi": "10.1016/j.aop.2022.168827",
       "url": "https://arxiv.org/abs/2110.07168v1",
       "relevance": ["future_input_dependence", "path_integral", "collapse"],
+      "epistemic_state": "cached_public_record",
       "summary": "Constructs a path integral over Hilbert space that reproduces quantum mechanics and provides a framework that can be modified to include wavefunction collapse."
     },
     {
@@ -110,6 +118,7 @@
       "doi": "10.1103/PhysRevA.106.022212",
       "url": "https://arxiv.org/abs/2010.01327v5",
       "relevance": ["local_deterministic_model", "collapse", "statistical_independence", "no_signalling"],
+      "epistemic_state": "cached_public_record",
       "summary": "Provides a concrete local deterministic toy model that reproduces quantum predictions after averaging hidden variables while violating statistical independence."
     }
   ]
