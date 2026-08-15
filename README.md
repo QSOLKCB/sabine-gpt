@@ -73,10 +73,9 @@ profiles/                 public biographical/research profile only
 research/                 current research-focus routing
 publications/             selected paper registry
 sources/                  public provenance registry
-adapters/openai/           transport guidance for OpenAI-style assistants
-schema/                    validation schema
-scripts/                   local validation
-.github/workflows/         CI
+adapters/openai/          transport guidance for OpenAI-style assistants
+tools/                    local validation
+.github/workflows/        CI
 ```
 
 ## Public-only boundary
