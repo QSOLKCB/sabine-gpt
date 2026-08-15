@@ -29,6 +29,12 @@ REQUIRED = [
 ARXIV_VERSION_RE = re.compile(r"^v[1-9][0-9]*$")
 ARXIV_SOURCE_CLASSES = {"arxiv", "journal_and_arxiv"}
 ARXIV_URL_PREFIX = "https://arxiv.org/abs/"
+PROVENANCE_REGISTRY = "sources/public-sources.json"
+PROVENANCE_DEPENDENT_RECORDS = {
+    "profiles/sabine-public.json",
+    "research/current-focus.json",
+    "publications/index.json",
+}
 
 
 def reject_non_json_constant(value: str) -> None:
@@ -64,6 +70,21 @@ def require_timestamp_date(doc: dict, date_key: str, timestamp_key: str, label: 
     require(parsed.astimezone(timezone.utc) <= now + timedelta(minutes=10), f"{label} verification timestamp is in the future")
 
 
+def validate_routes(routes: dict, label: str) -> None:
+    """Validate route targets and fail closed if cached claims lack provenance."""
+    require(isinstance(routes, dict), f"{label} routing must be an object")
+    for route, records in routes.items():
+        require(isinstance(records, list), f"{label} route must be a list: {route}")
+        for rel in records:
+            require((ROOT / rel).is_file(), f"{label} target does not exist: {route} -> {rel}")
+
+        if PROVENANCE_DEPENDENT_RECORDS.intersection(records):
+            require(
+                PROVENANCE_REGISTRY in records,
+                f"{label} route loads cached claims without provenance registry: {route}",
+            )
+
+
 def main() -> None:
     for rel in REQUIRED:
         require((ROOT / rel).is_file(), f"missing required file: {rel}")
@@ -88,18 +109,11 @@ def main() -> None:
     require_timestamp_date(bootstrap, "snapshot_date", "snapshot_timestamp", "bootstrap")
     for rel in bootstrap["load_order"]:
         require((ROOT / rel).is_file(), f"bootstrap target does not exist: {rel}")
-    require(isinstance(bootstrap.get("routed_records"), dict), "bootstrap routed_records must be an object")
-    for route, records in bootstrap["routed_records"].items():
-        require(isinstance(records, list), f"bootstrap route must be a list: {route}")
-        for rel in records:
-            require((ROOT / rel).is_file(), f"routed bootstrap target does not exist: {route} -> {rel}")
+    validate_routes(bootstrap.get("routed_records"), "bootstrap")
 
     retrieval_policy = load_json("ai/retrieval-policy.json")
-    require(isinstance(retrieval_policy.get("routing"), dict), "retrieval-policy routing must be an object")
+    validate_routes(retrieval_policy.get("routing"), "retrieval-policy")
     for route, records in retrieval_policy["routing"].items():
-        require(isinstance(records, list), f"retrieval-policy route must be a list: {route}")
-        for rel in records:
-            require((ROOT / rel).is_file(), f"retrieval-policy target does not exist: {route} -> {rel}")
         if route in bootstrap["routed_records"]:
             require(
                 records == bootstrap["routed_records"][route],
