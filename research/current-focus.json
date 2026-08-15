@@ -1,0 +1,40 @@
+{
+  "id": "research.sabine.current_focus",
+  "record_type": "research_focus",
+  "schema_version": "1.0.0",
+  "visibility": "public",
+  "snapshot_date": "2026-08-16",
+  "basis": ["source.sabine.official.research", "source.sabine.mcmp", "paper.2510.11037"],
+  "focus_areas": [
+    {
+      "id": "focus.locality_statistical_independence",
+      "priority": 1,
+      "label": "Locality, Bell assumptions, and statistical independence",
+      "description": "Analyze which assumptions force Bell-type conclusions and how locally causal models can violate statistical independence without confusing correlation with superluminal causation.",
+      "papers": ["paper.2211.01331", "paper.2309.12293", "paper.2309.12299"]
+    },
+    {
+      "id": "focus.measurement_problem",
+      "priority": 2,
+      "label": "Measurement problem and physical wavefunction collapse",
+      "description": "Distinguish interpretations from dynamical extensions and identify what a model must actually explain to count as a solution of the measurement problem.",
+      "papers": ["paper.2206.10445", "paper.2010.01327", "paper.2110.07168", "paper.2510.11037"]
+    },
+    {
+      "id": "focus.superdeterminism_finetuning_testability",
+      "priority": 3,
+      "label": "Superdeterminism, fine-tuning, overfitting, and testability",
+      "description": "Treat fine-tuning claims operationally, distinguish broad model classes from restricted examples, and prioritize experimentally discriminating predictions.",
+      "papers": ["paper.2206.10619", "paper.2309.12293", "paper.2510.11037"]
+    },
+    {
+      "id": "focus.quantum_gravity_collapse",
+      "priority": 4,
+      "label": "Quantum gravity and local collapse",
+      "description": "Explore whether constraints arising from a deeper matter-geometry theory can yield effective local collapse dynamics with testable consequences.",
+      "papers": ["paper.2510.11037", "paper.2110.07168"]
+    }
+  ],
+  "routing_rule": "Load only the focus areas materially relevant to the current question; do not assume every historical research topic is current priority.",
+  "last_verified": "2026-08-16"
+}
