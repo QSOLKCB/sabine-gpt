@@ -8,22 +8,22 @@
   "claims": [
     {
       "claim": "Sabine Hossenfelder is a physicist, author, and content creator.",
-      "epistemic_state": "retrieved",
+      "epistemic_state": "cached_public_record",
       "sources": ["source.sabine.official.home"]
     },
     {
       "claim": "Her public research page states that her current work is mostly in the foundations of physics.",
-      "epistemic_state": "retrieved",
+      "epistemic_state": "cached_public_record",
       "sources": ["source.sabine.official.research"]
     },
     {
       "claim": "Her MCMP public profile describes current research interests focused on locality and fine-tuning in theory development, including superdeterministic approaches and how they can be experimentally tested.",
-      "epistemic_state": "retrieved",
+      "epistemic_state": "cached_public_record",
       "sources": ["source.sabine.mcmp"]
     },
     {
       "claim": "Her public research history spans quantum gravity, particle physics, cosmology, astrophysics, statistical mechanics, and quantum foundations.",
-      "epistemic_state": "retrieved",
+      "epistemic_state": "cached_public_record",
       "sources": ["source.sabine.official.research", "source.sabine.mcmp"]
     }
   ],
