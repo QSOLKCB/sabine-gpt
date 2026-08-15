@@ -9,6 +9,7 @@
     "public_institutional_profile",
     "arxiv",
     "journal_or_publisher_record",
+    "journal_and_arxiv",
     "doi_metadata",
     "orcid_public_record",
     "public_conference_or_talk_material",
@@ -18,6 +19,7 @@
     "current_primary_paper_or_repository",
     "author_official_public_site",
     "journal_or_publisher_record",
+    "journal_and_arxiv",
     "arxiv",
     "public_institutional_profile",
     "doi_or_orcid_metadata",
@@ -34,6 +36,8 @@
   ],
   "rules": [
     "every canonical biographical or research claim must resolve to at least one public source id",
+    "every source registry document and admitted source record must declare visibility=public",
+    "every source class must be present in allowed_source_classes",
     "do not infer private facts from public omissions",
     "do not infer endorsement affiliation or authorship from repository naming",
     "source authenticity does not prove every claim contained in the source",
@@ -43,6 +47,7 @@
   ],
   "fail_closed_on": [
     "unknown_visibility",
+    "unknown_source_class",
     "private_source_dependency",
     "unverifiable_attribution",
     "fabricated_citation",
