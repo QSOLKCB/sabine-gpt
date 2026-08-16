@@ -103,9 +103,24 @@ for marker in [
     "ADJACENT",
     "serviceWorker.register",
     "prefers-color-scheme: dark",
+    "function decodeRoutePart(part)",
+    "if (decoded.includes(null)) return { name: 'not-found', id: null }",
+    'role="group" aria-label="Paper membership map',
+    '<a class="atlas-node paper"',
+    "Status: ${paper.status}",
+    "DOI: ${paper.doi}",
 ]:
     require(marker in app, f"application missing required feature marker: {marker}")
 require("fetch('http" not in app and 'fetch("http' not in app, "application must not send data to a remote runtime")
+require('role="img" aria-label="Paper membership map' not in app, "atlas links must not be hidden inside an image role")
+
+styles = (SITE / "styles.css").read_text(encoding="utf-8")
+print_styles = re.search(r"@media print\s*\{(?P<body>.*?)\n\}\n\n@media \(prefers-reduced-motion", styles, re.DOTALL)
+require(print_styles is not None, "print stylesheet is required")
+brief_print = re.search(r"\.brief-preview\s*\{(?P<body>.*?)\}", print_styles.group("body"), re.DOTALL)
+require(brief_print is not None, "print stylesheet must include the brief preview")
+require(re.search(r"max-height:\s*none", brief_print.group("body")) is not None, "printed briefs must not be height-limited")
+require(re.search(r"overflow:\s*visible", brief_print.group("body")) is not None, "printed briefs must not be clipped")
 
 service_worker = (SITE / "sw.js").read_text(encoding="utf-8")
 for rel in required:

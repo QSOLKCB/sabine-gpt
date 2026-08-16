@@ -988,6 +988,15 @@ textarea {
   .document-title p {
     color: #333;
   }
+
+  .brief-preview {
+    max-height: none;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #000;
+    overflow: visible;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
