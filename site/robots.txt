@@ -1,0 +1,6 @@
+# Human-facing project site. Automated access is not authorised.
+User-agent: *
+Disallow: /
+
+# Project-path form for crawlers that evaluate this file outside the origin root.
+Disallow: /sabine-gpt/

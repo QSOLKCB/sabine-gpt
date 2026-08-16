@@ -14,6 +14,7 @@ REQUIRED = [
     "README.md",
     "README4AI.md",
     "AGENTS.md",
+    "HUMAN-INTERFACE-POLICY.md",
     "ai/bootstrap.json",
     "ai/source-policy.json",
     "ai/epistemic-contract.json",
@@ -119,6 +120,12 @@ def main() -> None:
                 records == bootstrap["routed_records"][route],
                 f"routing mismatch between bootstrap and retrieval policy: {route}",
             )
+    site_exclusion = retrieval_policy.get("excluded_paths", {}).get("site/**", {})
+    require(site_exclusion, "retrieval policy must exclude site/** from AI context")
+    require(
+        "claim_support" in site_exclusion.get("forbidden_uses", []),
+        "site/** exclusion must forbid use as claim support",
+    )
 
     source_policy = load_json("ai/source-policy.json")
     require(source_policy["publication_model"] == "explicit_public_only", "public-only policy must remain explicit")
@@ -150,7 +157,16 @@ def main() -> None:
         else:
             require("arxiv" not in item and "arxiv_version" not in item, f"non-arXiv source carries arXiv metadata without an arXiv source class: {source_id}")
 
-    epistemic_states = set(load_json("ai/epistemic-contract.json")["states"])
+    epistemic_contract = load_json("ai/epistemic-contract.json")
+    epistemic_states = set(epistemic_contract["states"])
+    require(
+        "ADJACENT_TRUTH != INHERITED_TRUTH" in epistemic_contract.get("guards", []),
+        "epistemic contract must preserve the claim-local adjacent-truth guard",
+    )
+    require(
+        "PROJECTION != CANONICAL_SOURCE" in epistemic_contract.get("guards", []),
+        "epistemic contract must preserve the projection/canonical boundary",
+    )
 
     publication_doc = load_json("publications/index.json")
     require_timestamp_date(publication_doc, "snapshot_date", "snapshot_timestamp", "publication index")

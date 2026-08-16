@@ -1,106 +1,155 @@
-# sabine-gpt
+# Sabine Research Desk 95 + sabine-gpt
 
-A public-source-only research context pack for a GPT-5.6-class assistant intended to help Sabine Hossenfelder with mathematics and foundations-of-physics work.
+An unofficial, public-source-only research desk and evidence-first context pack for mathematics and foundations-of-physics work.
 
-> **Unofficial.** This repository is not authored, endorsed, or maintained by Sabine Hossenfelder or OpenAI. It is a QSOLKCB research-context experiment built entirely from publicly available sources.
+> **Unofficial and independent.** This repository is not authored, endorsed, or maintained by Sabine Hossenfelder or OpenAI. It contains public metadata, links, and original summaries—not private context, paper text, or a personality clone.
 
-The design combines the **selective, machine-first context architecture** of `QSOL-CONTEXT` with the **public-boundary, epistemic-state, and retrieval contracts** of `QSOL-SUBSTRATE`. No private QSOL-CONTEXT records are copied into this repository.
+## Open the research desk
 
-## Design target
+### [Launch Sabine Research Desk 95 →](https://qsolkcb.github.io/sabine-gpt/)
 
-The assistant should be useful precisely because it is willing to stop pretending.
+That link is the normal way to use the project. No cloning, terminal, Python, JSON, GitHub account, or programming knowledge is required.
 
-When solving mathematics or physics problems it should:
+If the link has not activated yet, the repository owner must make the one-time selection **Settings → Pages → Build and deployment → GitHub Actions**, then merge the Pages pull request.
 
-- separate **proved**, **derived**, **inferred**, **working-hypothesis**, **unknown**, and **conflicting** claims;
-- prefer primary sources and exact paper/version identifiers;
-- verify the present status of a supposedly open or solved problem rather than relying on memory;
-- show assumptions and identify the step at which an argument depends on them;
-- search for counterexamples and alternative formulations before declaring a problem impossible;
-- label an unverified proof as a **candidate proof**, not a proof;
-- say **"I don't know yet"** when evidence is insufficient;
-- ask for additional papers, definitions, constraints, or sources when they would materially change the answer;
-- never convert confidence into evidence.
+## One-minute guide
 
-A good failure mode is:
+| Choose | To do this |
+|---|---|
+| **Work** | See the source-attributed public research snapshot. |
+| **Papers** | Browse selected papers, exact arXiv revisions, DOI metadata, and short orientation summaries. |
+| **Atlas** | Visually navigate the explicit paper-to-theme links. |
+| **Brief** | Select a question, constraints, and the smallest relevant paper set; then copy or download the packet. |
+| **Sources** | Inspect the public evidence and deterministic projection receipt. |
+| **Help** | Read the independence, privacy, copyright, and automated-access boundaries. |
 
-> I don't know yet. The available context is insufficient to justify that conclusion. I need more research, or additional sources/constraints from you, before I can claim this is solved or unsolved.
+Favourites, reviewed-paper marks, and brief selections stay in the current browser. The desk has no account, ads, telemetry, analytics, CDN, remote application server, or third-party runtime dependency. It works offline after a successful first visit in a supporting browser.
 
-## Public research context
+See [START-HERE.md](START-HERE.md) for the short standalone guide.
 
-Sabine's public research page says her work is mostly in the foundations of physics. Her MCMP profile describes current interests around **locality**, **fine-tuning**, **superdeterminism/contextuality**, and ways these ideas can be experimentally tested.
+## What is currently organised
 
-The initial paper set therefore prioritizes:
+The snapshot verified on **16 August 2026** groups selected public work into four themes:
 
-| Priority | Paper | Why it is loaded |
-|---|---|---|
-| 1 | **How Gravity Can Explain the Collapse of the Wavefunction** (2025), arXiv:2510.11037v1 | Recent work connecting quantum gravity, locality, measurement, and a testable collapse model. |
-| 2 | **Taxonomy for Physics Beyond Quantum Mechanics** (2024), Proc. R. Soc. A 480, 20230779, arXiv:2309.12293v2 | Canonical terminology for superdeterministic, retrocausal, future-input-dependent, and related models. |
-| 3 | **Quantum Confusions, Cleared Up (or so I hope)** (rev. 2024), arXiv:2309.12299v2 | Instrumental treatment of common quantum-foundations and locality claims. |
-| 4 | **Bell's theorem allows local theories of quantum mechanics** (2022), Nature Physics 18, 1382, arXiv:2211.01331v2 | Central to the locality/statistical-independence distinction. |
-| 5 | **What does it take to solve the measurement problem?** (2022), J. Phys. Commun. 6 102001, arXiv:2206.10445v3 | Defines what would count as solving the measurement problem. |
-| 6 | **Comment on "Experimentally adjudicating..."** (2024), Phys. Rev. A 109, 026201, arXiv:2206.10619v4 | Directly relevant to fine-tuning, overfitting, and empirical discrimination. |
-| 7 | **A Future-Input Dependent Path Integral for Quantum Mechanics** (2022), Annals of Physics 440, 168827, arXiv:2110.07168v1 | Mathematical machinery for future-input-dependent dynamics and collapse. |
-| 8 | **A Toy Model for Local and Deterministic Wave-function Collapse** (2022), Phys. Rev. A 106, 022212, arXiv:2010.01327v5 | Concrete local deterministic model and statistical-independence violation. |
+1. locality, Bell assumptions, and statistical independence;
+2. the measurement problem and physical wavefunction collapse;
+3. superdeterminism, fine-tuning, overfitting, and testability;
+4. quantum gravity and local collapse.
 
-The machine-readable registry is in `publications/index.json`; source provenance is in `sources/public-sources.json`.
+The selected shelf currently contains eight public paper records. It is intentionally **selective, not exhaustive**. “Current” means only what the cited public pages and dated repository snapshot support; it does not claim knowledge of private plans or unpublished work.
 
-## Machine bootstrap
+## Why it remains inspectable
 
-AI agents should begin with:
+The canonical public records remain the source of truth:
+
+```text
+profiles/sabine-public.json
+research/current-focus.json
+publications/index.json
+sources/public-sources.json
+```
+
+The Pages data file is a deterministic human-interface projection produced by `tools/build_site_data.py`. Its projection manifest records:
+
+- every canonical input path and SHA-256;
+- one canonical input fingerprint;
+- generator path and SHA-256;
+- generated bundle path and SHA-256;
+- `authority: projection_only`.
+
+The generated site bundle is never edited as knowledge and never becomes canonical. Identical canonical bytes and generator bytes produce identical projection artifacts; no build timestamp or environment-specific path is embedded.
+
+This follows the QSOL-SUBSTRATE principle:
+
+> A substrate should become more portable, more compact, and more useful without becoming less inspectable or less trustworthy.
+
+## Research discipline
+
+The context pack is designed to stop pretending when evidence runs out. It requires a research assistant to:
+
+- separate **proved**, **derived**, **retrieved**, **cached public record**, **inferred**, **working hypothesis**, **candidate proof**, **numerically supported**, **unknown**, **conflict**, and **refuted** states;
+- state assumptions and check theorem hypotheses;
+- preserve exact paper/version identifiers;
+- verify time-sensitive literature status against live primary sources;
+- search for counterexamples and materially different approaches before declaring impossibility;
+- call an unchecked proof-like argument a **candidate proof**;
+- say **“I don't know yet”** when the available evidence is insufficient;
+- keep epistemic status separate from humour, register, or presentation style;
+- enforce `ADJACENT_TRUTH != INHERITED_TRUTH`: every substantive claim earns support from its own evidence.
+
+## Human interface versus AI context
+
+The Pages interface under `site/**` is human-facing. It declares automated crawler indexing, model training, embedding, RAG ingestion, dataset construction, and automated summarisation denied. A person can deliberately export a small packet through the **Brief** screen.
+
+GitHub Pages is public. `robots.txt`, page metadata, `llms.txt`, and the machine-readable access policy are deterrence and policy signals for compliant systems—not authentication, encryption, or secrecy. Confidential information must never be committed here.
+
+AI consumers deliberately given the repository by a human begin with:
 
 ```text
 README4AI.md
 ai/bootstrap.json
 ```
 
-The mandatory contract layer then loads, in order:
-
-1. public source policy;
-2. epistemic-state contract;
-3. math/research contract;
-4. retrieval policy;
-5. persona/affiliation boundary.
-
-After the task is classified, `ai/bootstrap.json` supplies `routed_records`. Consumers load only the smallest sufficient optional set: for example, a pure mathematics problem does **not** load Sabine's profile or publication registry, while a literature-status or quantum-foundations task can route to the source registry, current-focus data, and selected publications as needed.
-
-## Repository layout
-
-```text
-ai/                       normative machine contracts
-profiles/                 public biographical/research profile only
-research/                 current research-focus routing
-publications/             selected paper registry
-sources/                  public provenance registry
-adapters/openai/          transport guidance for OpenAI-style assistants
-tools/                    local validation
-.github/workflows/        CI
-```
+They follow the canonical machine contracts and must not load `site/**` as evidence or context. See [HUMAN-INTERFACE-POLICY.md](HUMAN-INTERFACE-POLICY.md).
 
 ## Public-only boundary
 
-Every canonical claim in this repository must be traceable to a public source. Private correspondence, private context repositories, leaked material, personal inference, and unsupported biographical reconstruction are forbidden as evidence.
+Every canonical biographical or research claim must resolve to a public source. Forbidden evidence includes:
 
-Absence from the repository means **unknown/unloaded**, not false.
+- private QSOL-CONTEXT records;
+- private correspondence or nonpublic documents;
+- credentials, leaks, or stolen material;
+- unsupported personal inference;
+- model memory alone for a time-sensitive claim.
 
-Static repository records use a cached/source-attributed epistemic state; `retrieved` is reserved for evidence actually fetched during the active task.
+Absence means **unknown or not loaded**, not false. A genuine source does not establish every claim adjacent to it. Current primary evidence overrides stale cached context.
 
-The screenshot in the repository is a motivational artifact. It is **not** canonical evidence for research claims or personal attributes.
+## For maintainers
+
+Update canonical records first, then regenerate and validate the projection:
+
+```sh
+python3 tools/build_site_data.py
+python3 tools/validate_context.py
+python3 tools/build_site_data.py --check
+python3 tests/test_site.py
+node --check site/js/app.js
+node --check site/sw.js
+```
+
+The GitHub Pages workflow repeats these checks, uploads only `site/`, and deploys only after validation succeeds.
+
+Repository layout:
+
+```text
+ai/                         normative machine contracts
+profiles/                   public research profile
+research/                   source-attributed focus routing
+publications/               selected paper registry
+sources/                    public provenance registry
+site/                       human-only Pages projection
+site/data/                  generated bundle + projection receipt
+tools/build_site_data.py    deterministic projection builder
+tools/validate_context.py   canonical-context validator
+tests/test_site.py          human-interface/boundary checks
+.github/workflows/          context validation and Pages deployment
+```
 
 ## Primary public sources
 
 - https://sabinehossenfelder.com/research-2/
 - https://sabinehossenfelder.com/
 - https://www.mcmp.philosophie.uni-muenchen.de/people/external_members/hossenfelder_sabine/index.html
-- https://arxiv.org/
-- journal DOI landing pages listed in `publications/index.json`
+- exact arXiv revisions and DOI records listed in `publications/index.json`
 
-## Lineage
+## Lineage and implementation boundary
 
-- `QSOLKCB/QSOL-CONTEXT` contributes the selective machine-context pattern.
-- `QSOLKCB/QSOL-SUBSTRATE` contributes the explicit public boundary, epistemic-state discipline, and smallest-sufficient-context retrieval pattern.
-- `QSOLKCB/sabine-gpt` specializes those ideas for public mathematical and physics research assistance.
+- **Synergetics 95** and **Physics X 95** contribute interaction ideas: a 1990s CD-ROM encyclopedia shell, contents explorer, search, favourites, progress marks, offline use, printing, and a visual atlas.
+- **QSOL-SUBSTRATE** contributes explicit-public publication, canonical-versus-projection separation, claim-local provenance, smallest-sufficient-context, deterministic receipts, and reviewable refreshes.
+- **sabine-gpt** specializes those patterns for public mathematical and foundations-of-physics research assistance.
+
+The Pages application is an original Apache-2.0 implementation. It does not copy Microsoft Encarta code/assets or MPL-2.0 code/assets from Synergetics 95 or Physics X 95.
 
 ## License
 
-Apache-2.0. Source papers and third-party webpages remain under their own respective licenses and copyright terms; this repository stores metadata, links, and short original summaries rather than republishing paper text.
+Apache-2.0. Source papers, book titles, names, marks, and third-party webpages remain under their respective rights. This repository stores public metadata, links, and short original summaries rather than republishing papers.

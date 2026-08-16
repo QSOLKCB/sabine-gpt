@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "path": "site/data/context.bundle.js",
+      "sha256": "184602a55f991cbff542f5e31d9b52d540c756143f93726cb838e2f7097ce37e"
+    }
+  ],
+  "authority": "projection_only",
+  "canonical_fingerprint_sha256": "a69a73989924b8a1599e3c9c007f02fc502d29e1dea6380bc681cec4c8c10ea7",
+  "canonical_inputs": [
+    {
+      "path": "profiles/sabine-public.json",
+      "sha256": "cd2156886151eb180beecdfd2a7f6160ef58d1bca14f9deb4621d624fb10a9bc"
+    },
+    {
+      "path": "research/current-focus.json",
+      "sha256": "aec1ded48ad1ed32f9d5092e4994401aa5d76be65debee32b3d60838054f6c5f"
+    },
+    {
+      "path": "publications/index.json",
+      "sha256": "211da84624f2f39bcb38ba9c619b9fe0afea720a8e05b9d9e031eb4d8ce2292b"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "sha256": "943758c7e9ce91d386781e9dd18daa526cb2d90596e856e7aa100d22ff1a67ef"
+    }
+  ],
+  "canonical_source_of_truth": "canonical public records in the sabine-gpt repository",
+  "generator": "tools/build_site_data.py",
+  "generator_sha256": "942de4116b1f0448526e628907b11f7bce39fa6bb4321cd7272da0430c1095cc",
+  "inspection_rule": "Trace every displayed claim to a canonical record and its own public source; do not infer support by adjacency.",
+  "projection_kind": "deterministic_human_interface_projection",
+  "schema_version": "1.0.0",
+  "type": "sabine-research-desk-projection-manifest"
+}

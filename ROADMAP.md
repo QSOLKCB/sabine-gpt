@@ -13,6 +13,20 @@
 - [x] Add selected current-work paper registry.
 - [x] Add offline validator and GitHub Actions CI.
 
+## Phase 0.5 — Human research desk
+
+- [x] Add an original Encarta-95-style GitHub Pages interface inspired by Synergetics 95 and Physics X 95 interaction patterns.
+- [x] Add one-click navigation for public research themes, selected papers, source trails, and help.
+- [x] Add local favourites, reviewed-paper marks, search, print, responsive layout, and offline caching.
+- [x] Add a visual atlas whose edges mean explicit registry membership only.
+- [x] Add a human-controlled Research Brief builder with no automatic external transmission.
+- [x] Generate the site data deterministically from canonical public records.
+- [x] Bind canonical input hashes, canonical fingerprint, generator identity, and artifact hash in a projection manifest.
+- [x] Mark the Pages bundle `projection_only`; canonical public records remain authoritative.
+- [x] Exclude `site/**` from AI context, embeddings, training, RAG ingestion, automated summarisation, and claim support.
+- [x] Add crawler deterrence and an honest warning that public GitHub Pages is not authentication or secrecy.
+- [x] Add static, accessibility, projection, access-boundary, and Pages workflow validation.
+
 ## Phase 1 — Mathematical humility gauntlet
 
 Build a deterministic evaluation suite for the failure modes this repository is meant to prevent.
@@ -85,3 +99,6 @@ These are not roadmap items; they are invariants.
 - A failed attempt is not an impossibility proof.
 - A plausible derivation is not automatically a proof.
 - "I don't know yet" is a valid and often optimal result.
+- `ADJACENT_TRUTH != INHERITED_TRUTH`.
+- `PROJECTION != CANONICAL_SOURCE`.
+- Human-interface export is deliberate and smallest-sufficient; no automatic external transmission.

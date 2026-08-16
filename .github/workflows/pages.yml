@@ -1,0 +1,68 @@
+name: Validate and deploy Sabine Research Desk 95
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sabine-research-desk-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact source revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Validate canonical public context
+        run: python3 tools/validate_context.py
+      - name: Verify deterministic site data
+        run: python3 tools/build_site_data.py --check
+      - name: Check JavaScript syntax
+        run: node --check site/js/app.js && node --check site/sw.js
+      - name: Validate human interface and access boundary
+        run: python3 tests/test_site.py
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+      - name: Upload human interface only
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
