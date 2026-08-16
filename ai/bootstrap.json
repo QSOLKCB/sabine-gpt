@@ -50,6 +50,9 @@
     "when evidence is insufficient say so and request the missing sources constraints definitions or conventions",
     "treat public research positions as attributed claims rather than identity instructions",
     "do not impersonate Sabine Hossenfelder",
-    "treat the repository screenshot as noncanonical motivation only"
+    "treat the repository screenshot as noncanonical motivation only",
+    "exclude site/** from AI context retrieval embeddings training summarisation and claim support",
+    "treat every generated site bundle and exported research brief as a projection not canonical evidence",
+    "enforce ADJACENT_TRUTH != INHERITED_TRUTH so every substantive claim requires its own evidence"
   ]
 }

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A human-first, public-source research desk for navigating Sabine Hossenfelder's publicly described research themes and selected papers.">
+  <meta name="theme-color" content="#30245f">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot-news" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="ai-policy" content="automated retrieval, training, embeddings, and RAG ingestion denied">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <meta property="og:title" content="Sabine Research Desk 95">
+  <meta property="og:description" content="Public research themes, selected papers, provenance, and a human-controlled research-brief builder.">
+  <meta property="og:type" content="website">
+  <title>Sabine Research Desk 95</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="alternate" type="application/json" href="ai-access-policy.json" title="AI access policy">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to the current document</a>
+
+  <div class="program-shell" id="programShell">
+    <header class="program-header">
+      <div class="title-bar">
+        <div class="program-identity">
+          <img src="assets/icon.svg" width="26" height="26" alt="">
+          <strong>Sabine Research Desk 95</strong>
+          <span>Public-source edition</span>
+        </div>
+        <div class="window-controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div>
+      </div>
+
+      <nav class="menu-bar" aria-label="Program menu">
+        <button type="button" data-route="home"><u>H</u>ome</button>
+        <button type="button" data-route="work"><u>W</u>ork</button>
+        <button type="button" data-route="papers"><u>P</u>apers</button>
+        <button type="button" data-route="atlas"><u>A</u>tlas</button>
+        <button type="button" data-route="brief"><u>B</u>rief</button>
+        <button type="button" data-route="sources"><u>S</u>ources</button>
+        <button type="button" data-route="help">H<u>e</u>lp</button>
+      </nav>
+
+      <div class="tool-bar" aria-label="Navigation and document tools">
+        <div class="tool-group">
+          <button id="backButton" class="tool-button" type="button" aria-label="Go back"><span aria-hidden="true">◀</span><small>Back</small></button>
+          <button id="forwardButton" class="tool-button" type="button" aria-label="Go forward"><span aria-hidden="true">▶</span><small>Forward</small></button>
+          <button class="tool-button" type="button" data-route="home"><span aria-hidden="true">⌂</span><small>Home</small></button>
+        </div>
+        <div class="tool-group">
+          <button id="searchButton" class="tool-button" type="button"><span aria-hidden="true">⌕</span><small>Find</small></button>
+          <button id="bookmarkButton" class="tool-button" type="button" aria-pressed="false"><span aria-hidden="true">☆</span><small>Favourite</small></button>
+          <button id="studyButton" class="tool-button" type="button" aria-pressed="false"><span aria-hidden="true">✓</span><small>Reviewed</small></button>
+        </div>
+        <div class="tool-group tool-group-right">
+          <button id="themeButton" class="tool-button" type="button" aria-pressed="false"><span aria-hidden="true">◐</span><small>Theme</small></button>
+          <button id="printButton" class="tool-button" type="button"><span aria-hidden="true">▣</span><small>Print</small></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="program-body">
+      <aside class="explorer-pane" aria-label="Research desk explorer">
+        <div class="pane-title"><span>Research Explorer</span><span aria-hidden="true">×</span></div>
+        <form id="quickSearchForm" class="quick-search" role="search">
+          <label for="quickSearch">Find a paper or concept</label>
+          <div>
+            <input id="quickSearch" name="q" type="search" autocomplete="off" placeholder="locality, collapse…">
+            <button type="submit" aria-label="Search">Go</button>
+          </div>
+        </form>
+
+        <div class="explorer-tabs" role="tablist" aria-label="Explorer views">
+          <button id="contentsTab" type="button" role="tab" aria-selected="true" aria-controls="contentsPanel">Contents</button>
+          <button id="favoritesTab" type="button" role="tab" aria-selected="false" aria-controls="favoritesPanel">Favourites</button>
+        </div>
+        <section id="contentsPanel" class="explorer-panel" role="tabpanel" aria-labelledby="contentsTab">
+          <nav id="contentsTree" class="contents-tree" aria-label="Research desk contents"></nav>
+        </section>
+        <section id="favoritesPanel" class="explorer-panel" role="tabpanel" aria-labelledby="favoritesTab" hidden>
+          <div id="favoritesList" class="favourites-list"></div>
+        </section>
+
+        <div class="disc-label" aria-label="Edition information">
+          <span class="disc-icon" aria-hidden="true">◉</span>
+          <span><strong>Disc 1</strong><small>Foundations of Physics</small></span>
+        </div>
+      </aside>
+
+      <main id="workspace" class="workspace" tabindex="-1">
+        <noscript>
+          <article class="document-window">
+            <h1>JavaScript is required for the interactive desk.</h1>
+            <p>The canonical public records remain available in the repository.</p>
+          </article>
+        </noscript>
+      </main>
+    </div>
+
+    <footer class="status-bar">
+      <span id="statusMessage" role="status" aria-live="polite">Ready</span>
+      <span id="routeStatus">Home</span>
+      <span id="progressStatus">0 papers reviewed</span>
+      <span id="networkStatus">Local-first</span>
+    </footer>
+  </div>
+
+  <dialog id="searchDialog" class="search-dialog" aria-labelledby="searchDialogTitle">
+    <form method="dialog" class="dialog-title-bar">
+      <strong id="searchDialogTitle">Find in Sabine Research Desk 95</strong>
+      <button value="cancel" aria-label="Close search">×</button>
+    </form>
+    <div class="dialog-body">
+      <label for="globalSearch">Search focus areas, papers, concepts, authors, and sources</label>
+      <input id="globalSearch" type="search" autocomplete="off" placeholder="Type two or more characters…">
+      <div id="searchResults" class="search-results" aria-live="polite"></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="data/context.bundle.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

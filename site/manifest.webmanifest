@@ -1,0 +1,19 @@
+{
+  "name": "Sabine Research Desk 95 — Public-source edition",
+  "short_name": "Research Desk 95",
+  "description": "A local-first desk for navigating public research themes, selected papers, sources, and human-controlled research briefs.",
+  "id": "./#/home",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#211a45",
+  "theme_color": "#30245f",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

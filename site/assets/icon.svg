@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Sabine Research Desk 95 icon</title>
+  <desc id="desc">A gold open reference book beneath a violet orbital diagram and teal measurement marks.</desc>
+  <rect width="128" height="128" rx="10" fill="#211a45"/>
+  <path d="M15 79c17-7 33-5 49 5v31c-16-11-32-13-49-6V79Zm98 0c-17-7-33-5-49 5v31c16-11 32-13 49-6V79Z" fill="#d9b85c" stroke="#fff3c9" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M64 84v31" stroke="#6d4d20" stroke-width="3"/>
+  <ellipse cx="64" cy="43" rx="43" ry="18" fill="none" stroke="#74c4bb" stroke-width="5" transform="rotate(-20 64 43)"/>
+  <ellipse cx="64" cy="43" rx="43" ry="18" fill="none" stroke="#b39ae7" stroke-width="5" transform="rotate(36 64 43)"/>
+  <circle cx="64" cy="43" r="9" fill="#f3ce64" stroke="#fff3c9" stroke-width="3"/>
+  <path d="M26 20v12M20 26h12M102 55v12M96 61h12" stroke="#fff3c9" stroke-linecap="round" stroke-width="4"/>
+</svg>

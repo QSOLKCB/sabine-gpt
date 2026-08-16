@@ -1,0 +1,25 @@
+{
+  "type": "human-interface-ai-access-policy",
+  "schema_version": "1.0.0",
+  "scope": "the complete deployed Sabine Research Desk 95 site",
+  "audience": [
+    "human_researcher"
+  ],
+  "automated_access": {
+    "crawler_indexing": "denied",
+    "model_training": "denied",
+    "retrieval_augmented_generation_ingestion": "denied",
+    "embedding_or_vectorisation": "denied",
+    "automated_summarisation": "denied",
+    "dataset_construction": "denied"
+  },
+  "permitted_use": [
+    "interactive use by a human",
+    "printing or local offline use by a human",
+    "human-selected export through the Research Brief screen",
+    "explicit repository maintenance or accessibility testing requested by the repository owner"
+  ],
+  "canonical_ai_context": "AI consumers must use the separately governed repository records and must not treat site/** as evidence or context",
+  "confidentiality_warning": "This is a public GitHub Pages site. These directives express policy and deter compliant crawlers; they are not authentication, encryption, or a secrecy control.",
+  "effective_date": "2026-08-16"
+}

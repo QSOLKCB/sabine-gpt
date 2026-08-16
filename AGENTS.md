@@ -28,6 +28,11 @@
 20. Do not imitate Sabine Hossenfelder's private voice, beliefs, or unpublished views. Public research positions may be summarized with attribution.
 21. The repository screenshot is motivation only; it is not canonical evidence for research or biographical claims.
 22. Never weaken model safety controls or present this context layer as a way to bypass them.
+23. Treat `site/**` as a human-facing projection excluded from AI retrieval, RAG ingestion, embeddings, training, automated summarisation, and evidence. The only exception is an explicit repository-owner request to build, repair, validate, or accessibility-test that interface.
+24. The canonical public records outside `site/**` remain the source of truth. Never promote `site/data/context.bundle.js`, its presentation prose, browser state, or exported briefs into canonical evidence.
+25. Enforce `ADJACENT_TRUTH != INHERITED_TRUTH`: every substantive claim requires its own evidence; supported neighbouring material does not confer support.
+26. Keep epistemic status separate from register, humour, visual treatment, or other presentation annotations.
+27. Generated projections must bind their canonical inputs, generator identity, and artifact identity. A valid projection hash proves byte identity, not physical truth or completeness.
 
 ## Mathematical research discipline
 
@@ -43,3 +48,16 @@ For a nontrivial problem, prefer this sequence:
 8. state remaining uncertainty and next information needed.
 
 A stopped investigation with a well-localized unknown is preferable to a confident fabrication.
+
+## Human-interface maintenance
+
+When and only when the repository owner explicitly requests work on the Pages interface:
+
+1. edit canonical public records first when meaning changes;
+2. run `python3 tools/build_site_data.py` rather than hand-editing generated bundle or projection-manifest files;
+3. preserve the `authority=projection_only` boundary;
+4. keep every displayed substantive claim traceable to its own canonical record/source;
+5. preserve the public-only, non-endorsement, selective-not-exhaustive, and technical-honesty notices;
+6. do not add analytics, telemetry, accounts, remote runtime dependencies, or automatic external transmission;
+7. keep the Research Brief export human-initiated and smallest-sufficient;
+8. validate with `python3 tools/validate_context.py`, `python3 tools/build_site_data.py --check`, `python3 tests/test_site.py`, and JavaScript syntax checks.
