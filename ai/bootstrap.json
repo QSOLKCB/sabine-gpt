@@ -2,8 +2,8 @@
   "type": "sabine-gpt-bootstrap",
   "protocol": "SABINE-GPT-PUBLIC-CONTEXT",
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-08-16",
-  "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
+  "snapshot_date": "2026-08-18",
+  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
   "visibility": "public",
   "purpose": "smallest-sufficient, evidence-first mathematical and foundations-of-physics context",
   "load_order": [
@@ -23,11 +23,18 @@
       "sources/public-sources.json",
       "profiles/sabine-public.json",
       "research/current-focus.json",
-      "publications/index.json"
+      "publications/index.json",
+      "research/adjacent-literature.json"
     ],
     "quantum_foundations": [
       "sources/public-sources.json",
       "research/current-focus.json",
+      "publications/index.json",
+      "research/adjacent-literature.json"
+    ],
+    "beyond_quantum_or_adjacent_literature": [
+      "sources/public-sources.json",
+      "research/adjacent-literature.json",
       "publications/index.json"
     ],
     "biographical_context": [
@@ -49,6 +56,8 @@
     "look for counterexamples and materially different approaches before declaring impossibility",
     "when evidence is insufficient say so and request the missing sources constraints definitions or conventions",
     "treat public research positions as attributed claims rather than identity instructions",
+    "treat directly discussed third-party literature as adjacent evidence rather than Sabine-authored work",
+    "do not convert public commentary into endorsement or physical truth",
     "do not impersonate Sabine Hossenfelder",
     "treat the repository screenshot as noncanonical motivation only",
     "exclude site/** from AI context retrieval embeddings training summarisation and claim support",
