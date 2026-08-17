@@ -6,6 +6,7 @@
   "absence_semantics": "unknown_or_not_loaded",
   "allowed_source_classes": [
     "author_official_public_site",
+    "author_official_public_channel",
     "public_institutional_profile",
     "arxiv",
     "journal_or_publisher_record",
@@ -18,6 +19,7 @@
   "preferred_order": [
     "current_primary_paper_or_repository",
     "author_official_public_site",
+    "author_official_public_channel",
     "journal_or_publisher_record",
     "journal_and_arxiv",
     "arxiv",
