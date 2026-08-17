@@ -1,0 +1,61 @@
+{
+  "type": "sabine-gpt-adjacent-literature-index",
+  "schema_version": "1.0.0",
+  "visibility": "public",
+  "snapshot_date": "2026-08-18",
+  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
+  "selection_policy": "third-party public work directly discussed by Sabine Hossenfelder or materially useful for comparing publicly documented positions in quantum foundations; inclusion does not imply endorsement or authorship",
+  "records": [
+    {
+      "id": "adjacent.2606.12457",
+      "record_type": "third_party_paper_with_direct_public_commentary",
+      "title": "Quantum Entanglement Beyond Kinematics: A Dynamical Hypothesis in (3,2)-Dimensional Spacetime",
+      "authors": ["Marco Pettini"],
+      "year": 2026,
+      "status": "arxiv_preprint",
+      "paper_source": "paper.2606.12457",
+      "arxiv": "2606.12457",
+      "arxiv_version": "v2",
+      "url": "https://arxiv.org/abs/2606.12457v2",
+      "doi": "10.48550/arXiv.2606.12457",
+      "relevance": [
+        "quantum_entanglement",
+        "locality",
+        "no_signalling",
+        "measurement_problem",
+        "deterministic_collapse",
+        "extra_time_dimension",
+        "beyond_quantum_physics",
+        "testable_deviation_from_standard_quantum_mechanics"
+      ],
+      "epistemic_state": "cached_public_record",
+      "model_status": "working_hypothesis",
+      "paper_summary": "Proposes a warped (3,2)-dimensional spacetime in which a classical massless bulk field couples to entanglement-related preparation and measurement events. The model uses an extra timelike dimension to produce effectively instantaneous brane correlations while claiming to preserve operational no-signalling. It extends a Bohm-Bub-style collapse mechanism and predicts a small distance-dependent cross-pair correlation between two otherwise independent Bell-pair experiments.",
+      "paper_claim_boundaries": [
+        "The construction is a proposed dynamical model, not established physics.",
+        "The paper's geometric results are conditional on its adopted warped-product ansatz and admissibility assumptions.",
+        "The claimed cross-pair correlation is a falsifiable prediction that differs from standard quantum mechanics and therefore requires experimental testing.",
+        "Multiple-time theories carry known consistency concerns; the paper argues for an admissible sector rather than establishing a complete fundamental theory."
+      ],
+      "direct_public_commentary": {
+        "source": "source.sabine.youtube.8e_JSOxaEVQ",
+        "speaker": "Sabine Hossenfelder",
+        "relationship": "public discussion of this paper",
+        "epistemic_state": "cached_public_record",
+        "assessment_summary": "Hossenfelder presents the second-time-dimension mechanism as a genuinely new beyond-quantum-physics proposal and highlights its experimentally distinguishable cross-pair prediction. She also stresses that extra timelike dimensions are historically problematic, mentioning vacuum-instability, causality/time-travel, and general-relativity consistency concerns, and says the paper leaves important issues unresolved and needs broader observational consistency checks.",
+        "rating_context": "The supplied public-video transcript records a rating of 7/10 on her on-video scepticism meter; preserve this as commentary, not as an epistemic truth score.",
+        "position_boundary": "Her public discussion is evidence of her assessment of the paper, not evidence that the paper's physical claims are correct and not evidence that she endorses the model."
+      },
+      "comparison_targets": [
+        "paper.2211.01331",
+        "paper.2309.12293",
+        "paper.2309.12299",
+        "paper.2206.10445",
+        "paper.2010.01327",
+        "paper.2510.11037"
+      ]
+    }
+  ],
+  "routing_rule": "Load only when a task concerns quantum nonlocality, Bell assumptions, collapse dynamics, extra-dimensional explanations, beyond-quantum models, or Sabine Hossenfelder's public discussion of this paper.",
+  "nonendorsement_rule": "DIRECT_PUBLIC_COMMENTARY != ENDORSEMENT and ADJACENT_TRUTH != INHERITED_TRUTH"
+}
