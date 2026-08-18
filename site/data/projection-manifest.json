@@ -2,11 +2,11 @@
   "artifacts": [
     {
       "path": "site/data/context.bundle.js",
-      "sha256": "184602a55f991cbff542f5e31d9b52d540c756143f93726cb838e2f7097ce37e"
+      "sha256": "cd7c76b56ea53a933deb0d44d1fc8fe24ad89b818c591ced1ec01def2d1bc46b"
     }
   ],
   "authority": "projection_only",
-  "canonical_fingerprint_sha256": "a69a73989924b8a1599e3c9c007f02fc502d29e1dea6380bc681cec4c8c10ea7",
+  "canonical_fingerprint_sha256": "95675819cd72eb2e381fab487ba93dba31282fdf0f8eaf12650a61e0c83d2012",
   "canonical_inputs": [
     {
       "path": "profiles/sabine-public.json",
@@ -22,7 +22,7 @@
     },
     {
       "path": "sources/public-sources.json",
-      "sha256": "943758c7e9ce91d386781e9dd18daa526cb2d90596e856e7aa100d22ff1a67ef"
+      "sha256": "207a43006f6a200868445ee1fb57f7f9fac445ea4a881deba6f4aaa49371d706"
     }
   ],
   "canonical_source_of_truth": "canonical public records in the sabine-gpt repository",
