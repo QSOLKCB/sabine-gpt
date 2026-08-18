@@ -1,8 +1,8 @@
 {
   "type": "sabine-gpt-public-source-registry",
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-08-16",
-  "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
+  "snapshot_date": "2026-08-18",
+  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
   "visibility": "public",
   "sources": [
     {
@@ -25,6 +25,37 @@
       "visibility": "public",
       "url": "https://www.mcmp.philosophie.uni-muenchen.de/people/external_members/hossenfelder_sabine/index.html",
       "supports": ["current_research_focus", "external_membership", "research_history"]
+    },
+    {
+      "id": "source.sabine.youtube.8e_JSOxaEVQ",
+      "class": "author_official_public_channel",
+      "visibility": "public",
+      "url": "https://www.youtube.com/watch?v=8e_JSOxaEVQ",
+      "video_id": "8e_JSOxaEVQ",
+      "channel_handle": "@SabineHossenfelder",
+      "title": "Spooky Action At Distance Comes from Second Time Dimension, Physicist Claims",
+      "supports": [
+        "sabine_public_assessment_of_pettini_2606_12457",
+        "beyond_quantum_physics_classification",
+        "multiple_time_dimension_caveats",
+        "cross_pair_testability_context"
+      ]
+    },
+    {
+      "id": "paper.2606.12457",
+      "class": "arxiv",
+      "visibility": "public",
+      "arxiv": "2606.12457",
+      "arxiv_version": "v2",
+      "url": "https://arxiv.org/abs/2606.12457v2",
+      "doi": "10.48550/arXiv.2606.12457",
+      "supports": [
+        "extra_time_entanglement_hypothesis",
+        "warped_3_2_spacetime",
+        "bulk_field_collapse_model",
+        "no_signalling_claim",
+        "cross_pair_correlation_prediction"
+      ]
     },
     {
       "id": "paper.2510.11037",

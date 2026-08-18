@@ -53,7 +53,7 @@ window.SABINE_RESEARCH_DESK = {
   },
   "projection": {
     "build_timestamp": null,
-    "canonical_fingerprint_sha256": "a69a73989924b8a1599e3c9c007f02fc502d29e1dea6380bc681cec4c8c10ea7",
+    "canonical_fingerprint_sha256": "95675819cd72eb2e381fab487ba93dba31282fdf0f8eaf12650a61e0c83d2012",
     "canonical_inputs": [
       {
         "path": "profiles/sabine-public.json",
@@ -69,7 +69,7 @@ window.SABINE_RESEARCH_DESK = {
       },
       {
         "path": "sources/public-sources.json",
-        "sha256": "943758c7e9ce91d386781e9dd18daa526cb2d90596e856e7aa100d22ff1a67ef"
+        "sha256": "207a43006f6a200868445ee1fb57f7f9fac445ea4a881deba6f4aaa49371d706"
       }
     ],
     "canonical_source_of_truth": "canonical public records in the sabine-gpt repository",
@@ -329,8 +329,8 @@ window.SABINE_RESEARCH_DESK = {
   },
   "sources": {
     "schema_version": "1.0.0",
-    "snapshot_date": "2026-08-16",
-    "snapshot_timestamp": "2026-08-16T05:51:00+09:30",
+    "snapshot_date": "2026-08-18",
+    "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
     "sources": [
       {
         "class": "author_official_public_site",
@@ -362,6 +362,37 @@ window.SABINE_RESEARCH_DESK = {
           "research_history"
         ],
         "url": "https://www.mcmp.philosophie.uni-muenchen.de/people/external_members/hossenfelder_sabine/index.html",
+        "visibility": "public"
+      },
+      {
+        "channel_handle": "@SabineHossenfelder",
+        "class": "author_official_public_channel",
+        "id": "source.sabine.youtube.8e_JSOxaEVQ",
+        "supports": [
+          "sabine_public_assessment_of_pettini_2606_12457",
+          "beyond_quantum_physics_classification",
+          "multiple_time_dimension_caveats",
+          "cross_pair_testability_context"
+        ],
+        "title": "Spooky Action At Distance Comes from Second Time Dimension, Physicist Claims",
+        "url": "https://www.youtube.com/watch?v=8e_JSOxaEVQ",
+        "video_id": "8e_JSOxaEVQ",
+        "visibility": "public"
+      },
+      {
+        "arxiv": "2606.12457",
+        "arxiv_version": "v2",
+        "class": "arxiv",
+        "doi": "10.48550/arXiv.2606.12457",
+        "id": "paper.2606.12457",
+        "supports": [
+          "extra_time_entanglement_hypothesis",
+          "warped_3_2_spacetime",
+          "bulk_field_collapse_model",
+          "no_signalling_claim",
+          "cross_pair_correlation_prediction"
+        ],
+        "url": "https://arxiv.org/abs/2606.12457v2",
         "visibility": "public"
       },
       {
