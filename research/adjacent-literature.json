@@ -2,9 +2,9 @@
   "type": "sabine-gpt-adjacent-literature-index",
   "schema_version": "1.0.0",
   "visibility": "public",
-  "snapshot_date": "2026-08-20",
-  "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
-  "selection_policy": "third-party public work directly discussed by Sabine Hossenfelder or materially useful for comparing publicly documented positions and calibrating the boundary between mathematical consistency, physical plausibility, and observational support; inclusion does not imply endorsement or authorship",
+  "snapshot_date": "2026-08-21",
+  "snapshot_timestamp": "2026-08-21T02:20:00+09:30",
+  "selection_policy": "third-party public work directly discussed by Sabine Hossenfelder or materially useful for comparing publicly documented positions and calibrating the boundary between mathematical consistency, physical plausibility, experimental support, observational support, and prospective application claims; inclusion does not imply endorsement or authorship",
   "records": [
     {
       "id": "adjacent.2606.12457",
@@ -53,6 +53,85 @@
         "paper.2206.10445",
         "paper.2010.01327",
         "paper.2510.11037"
+      ]
+    },
+    {
+      "id": "adjacent.s41377-026-02374-7",
+      "record_type": "third_party_paper_with_direct_public_commentary",
+      "title": "Spontaneous formation and optical manipulation of a woven domain fabric in a ferroelectric crystal",
+      "authors": [
+        "Feifei Xin",
+        "Yehonatan Gelkop",
+        "Ewout van der Veer",
+        "Beatriz Noheda",
+        "Ludovica Falsi",
+        "Guoquan Zhang",
+        "Fang Bo",
+        "Aharon J. Agranat",
+        "Eugenio DelRe"
+      ],
+      "year": 2026,
+      "status": "published",
+      "paper_source": "paper.s41377-026-02374-7",
+      "url": "https://www.nature.com/articles/s41377-026-02374-7",
+      "journal": "Light: Science & Applications 15, 315 (2026)",
+      "doi": "10.1038/s41377-026-02374-7",
+      "published": "2026-07-14",
+      "relevance": [
+        "materials_science",
+        "ferroelectrics",
+        "spontaneous_symmetry_breaking",
+        "three_dimensional_domain_topology",
+        "topological_defects",
+        "charged_domain_walls",
+        "optical_manipulation",
+        "photonic_memory",
+        "neuromorphic_computing",
+        "experimental_claim_calibration"
+      ],
+      "epistemic_state": "cached_public_record",
+      "evidence_character": "experimental_observation_with_prospective_applications",
+      "paper_summary": "Reports the direct observation of a robust three-dimensional woven fabric of interlaced ferroelectric domains in bulk KTN:Li during a temperature-driven ferroelectric phase transition. The weave has history-dependent over/under crossings describable by linking numbers, embeds charged domain walls stabilized by the woven topology, and can be locally transformed into a lower-energy disentangled configuration by focused 514 nm visible light. The authors propose topologically protected photonic memory and neuromorphic-computing directions, while those applications remain prospective.",
+      "paper_claim_boundaries": [
+        "The paper reports an experimental woven ferroelectric-domain architecture, not a new fundamental particle species or a replacement for the ordinary classification of phases of matter.",
+        "The three-dimensional weave is supported by multifocus optical imaging together with polarization-resolved microscopy, PFM, Raman imaging, SHG microscopy, and modelling of the domain configuration.",
+        "The woven state is history-dependent and metastable: thermal cycling recreates a weave with a different linking-number distribution rather than deterministically reproducing the same stored pattern.",
+        "Focused 514 nm light can locally disentangle the weave, but the demonstrated manipulation does not yet provide deterministic bit-level writing of an arbitrary desired pattern.",
+        "The paper proposes photonic memory, energy-storage, optical-processing, and neuromorphic-computing possibilities; it does not demonstrate a deployable memory or neuromorphic device.",
+        "The paper's suggestion that related global topological defects may occur in other topology-driven systems is a forward-looking generalization, not an experimental demonstration in those systems.",
+        "Claims about Nobel-Prize potential or the beginning of an entirely new research area belong to public commentary and forecasting, not to the experimental result itself."
+      ],
+      "direct_public_commentary": {
+        "source": "source.sabine.youtube.NzQQXQK_Ngk",
+        "speaker": "Sabine Hossenfelder",
+        "relationship": "public discussion of this paper",
+        "epistemic_state": "cached_public_record",
+        "assessment_summary": "Hossenfelder treats the reported woven-domain structure as a genuinely new and unusually credible materials-science result. She emphasizes that the weave is three-dimensional, re-forms in different patterns after thermal cycling, remains stable at roughly fixed temperature, and can be altered with green but not infrared light. She also explicitly notes that this is a small laboratory study, applications are far away, and the demonstrated laser manipulation does not yet control exactly which memory pattern is written.",
+        "rating_context": "The supplied public-video transcript records a rating of 0/10 on her 'bullshit meter', the low-scepticism end of that presentation scale. Preserve this as an assessment annotation only: 0/10 is not independent experimental validation, a truth probability, or a substitute for the paper's evidence.",
+        "forecast_context": "The same commentary describes the discovery as potential Nobel-Prize material and possibly the beginning of a new research area while explicitly acknowledging that materials science is not her own research area and that she cannot independently judge the experiment in depth.",
+        "position_boundary": "Her public discussion is evidence of her assessment of the paper. It is not authorship, independent replication, proof of future applications, or evidence that a Nobel Prize will result."
+      },
+      "calibration_role": {
+        "role": "positive_control_for_high_credibility_experimental_claims",
+        "principle": "LOW_SCEPTICISM_RATING != INDEPENDENT_VALIDATION and EXPERIMENTAL_OBSERVATION != DEPLOYED_APPLICATION",
+        "use_for": [
+          "distinguishing a directly observed laboratory phenomenon from a speculative theoretical construction",
+          "rewarding convergent experimental probes while preserving method-specific limitations",
+          "separating demonstrated material behaviour from forecasts about memory, neuromorphic hardware, prizes, or a new research field",
+          "preserving an explicit low-scepticism public assessment without converting it into evidence",
+          "checking whether a summary retains the paper's application-distance and controllability caveats"
+        ],
+        "do_not_use_for": [
+          "treating a 0/10 commentary score as proof that the experiment is correct",
+          "calling every downstream application established",
+          "claiming deterministic optical memory writing has already been demonstrated",
+          "claiming a Nobel Prize is likely or guaranteed",
+          "generalizing the woven topology to unrelated physical systems without evidence"
+        ]
+      },
+      "comparison_targets": [
+        "adjacent.2606.12457",
+        "adjacent.2509.15302"
       ]
     },
     {
@@ -108,10 +187,11 @@
         ]
       },
       "comparison_targets": [
-        "adjacent.2606.12457"
+        "adjacent.2606.12457",
+        "adjacent.s41377-026-02374-7"
       ]
     }
   ],
-  "routing_rule": "Load only when a task concerns directly discussed third-party physics, quantum foundations, general relativity, black holes, gravastars, gravitational collapse, speculative spacetime constructions, or calibration of mathematical possibility against physical plausibility and observational support.",
-  "nonendorsement_rule": "DIRECT_PUBLIC_COMMENTARY != ENDORSEMENT and ADJACENT_TRUTH != INHERITED_TRUTH and MATHEMATICAL_CONSISTENCY != PHYSICAL_PLAUSIBILITY != OBSERVATIONAL_SUPPORT"
+  "routing_rule": "Load only when a task concerns directly discussed third-party physics, quantum foundations, general relativity, black holes, gravastars, gravitational collapse, speculative spacetime constructions, materials science, ferroelectrics, topological domain structures, photonic memory, neuromorphic-computing materials, or calibration of mathematical possibility and experimental observation against physical plausibility, observational support, and application claims.",
+  "nonendorsement_rule": "DIRECT_PUBLIC_COMMENTARY != ENDORSEMENT and ADJACENT_TRUTH != INHERITED_TRUTH and MATHEMATICAL_CONSISTENCY != PHYSICAL_PLAUSIBILITY != OBSERVATIONAL_SUPPORT and LOW_SCEPTICISM_RATING != INDEPENDENT_VALIDATION and EXPERIMENTAL_OBSERVATION != DEPLOYED_APPLICATION"
 }

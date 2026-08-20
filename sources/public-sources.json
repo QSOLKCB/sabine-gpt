@@ -1,8 +1,8 @@
 {
   "type": "sabine-gpt-public-source-registry",
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-08-20",
-  "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
+  "snapshot_date": "2026-08-21",
+  "snapshot_timestamp": "2026-08-21T02:20:00+09:30",
   "visibility": "public",
   "sources": [
     {
@@ -39,6 +39,41 @@
         "beyond_quantum_physics_classification",
         "multiple_time_dimension_caveats",
         "cross_pair_testability_context"
+      ]
+    },
+    {
+      "id": "source.sabine.youtube.NzQQXQK_Ngk",
+      "class": "author_official_public_channel",
+      "visibility": "public",
+      "url": "https://www.youtube.com/watch?v=NzQQXQK_Ngk",
+      "video_id": "NzQQXQK_Ngk",
+      "channel_handle": "@SabineHossenfelder",
+      "description": "Public video discussing Xin et al. (2026), spontaneous woven ferroelectric domain fabric, and its possible materials-science significance.",
+      "supports": [
+        "sabine_public_assessment_of_xin_s41377_026_02374_7",
+        "zero_out_of_ten_bullshit_meter_annotation",
+        "experimental_credibility_calibration",
+        "materials_science_significance_context",
+        "application_distance_caveat"
+      ]
+    },
+    {
+      "id": "paper.s41377-026-02374-7",
+      "class": "journal_or_publisher_record",
+      "visibility": "public",
+      "url": "https://www.nature.com/articles/s41377-026-02374-7",
+      "journal": "Light: Science & Applications 15, 315 (2026)",
+      "doi": "10.1038/s41377-026-02374-7",
+      "supports": [
+        "spontaneous_woven_ferroelectric_domain_fabric",
+        "ktn_li_ferroelectric_crystal",
+        "three_dimensional_interlaced_domains",
+        "linking_number_topology",
+        "charged_domain_walls",
+        "optical_disentanglement_514_nm",
+        "thermal_history_dependence",
+        "topologically_protected_photonic_memory_proposal",
+        "neuromorphic_computing_proposal"
       ]
     },
     {
