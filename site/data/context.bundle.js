@@ -53,7 +53,7 @@ window.SABINE_RESEARCH_DESK = {
   },
   "projection": {
     "build_timestamp": null,
-    "canonical_fingerprint_sha256": "3d2fc5d1de662c2fc60039b43fc64678461dd788a1b92a451bf1069744563877",
+    "canonical_fingerprint_sha256": "d49204c2e7ae50a92cb16fb1efe11868cd7d9baa31da5c97f619fe92965dd30d",
     "canonical_inputs": [
       {
         "path": "profiles/sabine-public.json",
@@ -69,7 +69,7 @@ window.SABINE_RESEARCH_DESK = {
       },
       {
         "path": "sources/public-sources.json",
-        "sha256": "5c5b01bd30c1f709d8e1bcdb281fa972b71d6ebb5a61743ff3ada85cb7b5c44a"
+        "sha256": "c09222f6ae86330f6bec099b5d44775719a593229fae1723394d713a2082ecce"
       }
     ],
     "canonical_source_of_truth": "canonical public records in the sabine-gpt repository",
@@ -329,8 +329,8 @@ window.SABINE_RESEARCH_DESK = {
   },
   "sources": {
     "schema_version": "1.0.0",
-    "snapshot_date": "2026-08-20",
-    "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
+    "snapshot_date": "2026-08-21",
+    "snapshot_timestamp": "2026-08-21T02:20:00+09:30",
     "sources": [
       {
         "class": "author_official_public_site",
@@ -377,6 +377,41 @@ window.SABINE_RESEARCH_DESK = {
         "title": "Spooky Action At Distance Comes from Second Time Dimension, Physicist Claims",
         "url": "https://www.youtube.com/watch?v=8e_JSOxaEVQ",
         "video_id": "8e_JSOxaEVQ",
+        "visibility": "public"
+      },
+      {
+        "channel_handle": "@SabineHossenfelder",
+        "class": "author_official_public_channel",
+        "description": "Public video discussing Xin et al. (2026), spontaneous woven ferroelectric domain fabric, and its possible materials-science significance.",
+        "id": "source.sabine.youtube.NzQQXQK_Ngk",
+        "supports": [
+          "sabine_public_assessment_of_xin_s41377_026_02374_7",
+          "zero_out_of_ten_bullshit_meter_annotation",
+          "experimental_credibility_calibration",
+          "materials_science_significance_context",
+          "application_distance_caveat"
+        ],
+        "url": "https://www.youtube.com/watch?v=NzQQXQK_Ngk",
+        "video_id": "NzQQXQK_Ngk",
+        "visibility": "public"
+      },
+      {
+        "class": "journal_or_publisher_record",
+        "doi": "10.1038/s41377-026-02374-7",
+        "id": "paper.s41377-026-02374-7",
+        "journal": "Light: Science & Applications 15, 315 (2026)",
+        "supports": [
+          "spontaneous_woven_ferroelectric_domain_fabric",
+          "ktn_li_ferroelectric_crystal",
+          "three_dimensional_interlaced_domains",
+          "linking_number_topology",
+          "charged_domain_walls",
+          "optical_disentanglement_514_nm",
+          "thermal_history_dependence",
+          "topologically_protected_photonic_memory_proposal",
+          "neuromorphic_computing_proposal"
+        ],
+        "url": "https://www.nature.com/articles/s41377-026-02374-7",
         "visibility": "public"
       },
       {
