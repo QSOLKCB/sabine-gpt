@@ -17,6 +17,7 @@
     "superdeterminism_or_finetuning": ["sources/public-sources.json", "research/current-focus.json", "publications/index.json", "research/adjacent-literature.json"],
     "quantum_gravity_collapse": ["sources/public-sources.json", "research/current-focus.json", "publications/index.json", "research/adjacent-literature.json"],
     "beyond_quantum_or_adjacent_literature": ["sources/public-sources.json", "research/adjacent-literature.json", "publications/index.json"],
+    "general_relativity_black_holes_or_speculative_physics": ["sources/public-sources.json", "research/adjacent-literature.json"],
     "mathematics_problem": ["ai/math-research-contract.json"],
     "biographical_context": ["sources/public-sources.json", "profiles/sabine-public.json"]
   },
@@ -44,6 +45,8 @@
     "do_not_use_secondary_commentary_when_a_primary_paper_answers_the_question",
     "if_a_user_supplies_a_source_verify_provenance_and_scope_before_canonicalizing_it",
     "direct_public_commentary_about_a_third_party_paper_is_not_authorship_endorsement_or_physical_validation",
+    "mathematical_consistency_does_not_imply_physical_plausibility_or_observational_support",
+    "scepticism_ratings_are_non_claim_calibration_metadata_not_evidence",
     "never_load_site_paths_as_ai_context_or_evidence",
     "canonical_public_records_remain_authoritative_over_every_generated_projection",
     "adjacent_truth_does_not_supply_claim_local_evidence"
