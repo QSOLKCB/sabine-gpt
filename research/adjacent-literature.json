@@ -57,7 +57,7 @@
     },
     {
       "id": "adjacent.2509.15302",
-      "record_type": "third_party_paper_with_direct_public_commentary",
+      "record_type": "third_party_paper_calibration_baseline",
       "title": "Formation of gravastars",
       "authors": ["Daniel Jampolski", "Luciano Rezzolla"],
       "year": 2026,
@@ -106,15 +106,6 @@
           "claiming gravastars or baby universes do not exist",
           "claiming the paper proves our universe formed inside a collapsing star"
         ]
-      },
-      "direct_public_commentary": {
-        "speaker": "Sabine Hossenfelder",
-        "relationship": "public discussion of this paper",
-        "source_status": "repository-owner supplied transcript from a current public video; exact public video locator not yet pinned in the source registry",
-        "evidence_role": "non_claim_calibration_only",
-        "assessment_summary": "The supplied transcript characterizes the construction as mathematically permissible but physically implausible because spacetime regions can be patched in many mathematically valid ways and the chosen construction is arranged to obtain the desired outcome. It emphasizes that the paper does not show a new universe forming inside a black hole, because the tuned expanding interior prevents the black-hole horizon from forming in that scenario.",
-        "rating_context": "The repository-owner supplied transcript reports a 9/10 rating on Hossenfelder's on-video bullshit meter. Preserve this only as a scepticism/calibration annotation. It is not a truth score, confidence score, proof status, or evidence against the equations.",
-        "position_boundary": "The commentary is useful for identifying non-claims and plausibility boundaries. It must not be inherited as evidence that the paper's mathematics is wrong or that gravastar formation is impossible."
       },
       "comparison_targets": [
         "adjacent.2606.12457"
