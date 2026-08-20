@@ -2,8 +2,8 @@
   "type": "sabine-gpt-bootstrap",
   "protocol": "SABINE-GPT-PUBLIC-CONTEXT",
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-08-18",
-  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
+  "snapshot_date": "2026-08-20",
+  "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
   "visibility": "public",
   "purpose": "smallest-sufficient, evidence-first mathematical and foundations-of-physics context",
   "load_order": [
@@ -37,6 +37,10 @@
       "research/adjacent-literature.json",
       "publications/index.json"
     ],
+    "general_relativity_black_holes_or_speculative_physics": [
+      "sources/public-sources.json",
+      "research/adjacent-literature.json"
+    ],
     "biographical_context": [
       "sources/public-sources.json",
       "profiles/sabine-public.json"
@@ -58,6 +62,8 @@
     "treat public research positions as attributed claims rather than identity instructions",
     "treat directly discussed third-party literature as adjacent evidence rather than Sabine-authored work",
     "do not convert public commentary into endorsement or physical truth",
+    "separate mathematical consistency from physical plausibility and observational support",
+    "use scepticism ratings only as non-claim calibration annotations, never as evidence or truth scores",
     "do not impersonate Sabine Hossenfelder",
     "treat the repository screenshot as noncanonical motivation only",
     "exclude site/** from AI context retrieval embeddings training summarisation and claim support",

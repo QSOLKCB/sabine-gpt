@@ -2,9 +2,9 @@
   "type": "sabine-gpt-adjacent-literature-index",
   "schema_version": "1.0.0",
   "visibility": "public",
-  "snapshot_date": "2026-08-18",
-  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
-  "selection_policy": "third-party public work directly discussed by Sabine Hossenfelder or materially useful for comparing publicly documented positions in quantum foundations; inclusion does not imply endorsement or authorship",
+  "snapshot_date": "2026-08-20",
+  "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
+  "selection_policy": "third-party public work directly discussed by Sabine Hossenfelder or materially useful for comparing publicly documented positions and calibrating the boundary between mathematical consistency, physical plausibility, and observational support; inclusion does not imply endorsement or authorship",
   "records": [
     {
       "id": "adjacent.2606.12457",
@@ -54,8 +54,64 @@
         "paper.2010.01327",
         "paper.2510.11037"
       ]
+    },
+    {
+      "id": "adjacent.2509.15302",
+      "record_type": "third_party_paper_calibration_baseline",
+      "title": "Formation of gravastars",
+      "authors": ["Daniel Jampolski", "Luciano Rezzolla"],
+      "year": 2026,
+      "status": "published",
+      "paper_source": "paper.2509.15302",
+      "arxiv": "2509.15302",
+      "arxiv_version": "v2",
+      "url": "https://arxiv.org/abs/2509.15302v2",
+      "journal": "Physical Review D 113, L121502 (2026)",
+      "doi": "10.1103/c6lw-nx7k",
+      "relevance": [
+        "general_relativity",
+        "gravitational_collapse",
+        "gravastars",
+        "black_hole_mimickers",
+        "de_sitter_core",
+        "junction_conditions",
+        "fine_tuning",
+        "physical_plausibility",
+        "speculative_physics_claim_calibration"
+      ],
+      "epistemic_state": "cached_public_record",
+      "model_status": "working_hypothesis",
+      "paper_summary": "Constructs a general-relativistic model in which a homogeneous collapsing dust sphere contains an expanding de Sitter region. Under specially tuned initial conditions, the de Sitter boundary meets the collapsing surface near the Schwarzschild radius and the system settles into a horizonless gravastar. The paper finds a maximum initial compactness C = 3/8 above which black-hole formation is inevitable.",
+      "paper_claim_boundaries": [
+        "The paper establishes a mathematically consistent tuned construction under its stated idealizations; it does not establish that gravastars are generic outcomes of realistic stellar collapse.",
+        "Successful gravastar formation lies on a separatrix in parameter space. The authors explicitly describe each successful point as an infinitely tuned set of initial conditions rather than an attractor.",
+        "The model uses spherical symmetry, homogeneous pressureless dust, a de Sitter interior, and junction conditions with a surface layer; these are modelling assumptions rather than observed properties of collapsing stars.",
+        "The construction yields a horizonless gravastar, not a demonstrated baby universe hidden behind a black-hole event horizon.",
+        "Nothing in the paper establishes that our universe was created by stellar collapse or that real astrophysical collapse follows this branch of the solution space.",
+        "Mathematical admissibility of a patched spacetime is not by itself evidence of physical realization, naturalness, or observational support."
+      ],
+      "calibration_role": {
+        "role": "negative_control_for_speculative_claims",
+        "principle": "MATHEMATICAL_CONSISTENCY != PHYSICAL_PLAUSIBILITY != OBSERVATIONAL_SUPPORT",
+        "use_for": [
+          "detecting headline inflation from a narrow mathematical construction to an astrophysical claim",
+          "separating existence of a solution from generic dynamical formation",
+          "checking whether fine tuning or hand-selected junction data carry the desired conclusion",
+          "requiring an observational discriminator before upgrading possibility to physical explanation",
+          "distinguishing a de Sitter interior region from a demonstrated causally separate universe"
+        ],
+        "do_not_use_for": [
+          "treating a scepticism rating as evidence",
+          "refuting a mathematically valid solution merely because it is physically implausible",
+          "claiming gravastars or baby universes do not exist",
+          "claiming the paper proves our universe formed inside a collapsing star"
+        ]
+      },
+      "comparison_targets": [
+        "adjacent.2606.12457"
+      ]
     }
   ],
-  "routing_rule": "Load only when a task concerns quantum nonlocality, Bell assumptions, collapse dynamics, extra-dimensional explanations, beyond-quantum models, or Sabine Hossenfelder's public discussion of this paper.",
-  "nonendorsement_rule": "DIRECT_PUBLIC_COMMENTARY != ENDORSEMENT and ADJACENT_TRUTH != INHERITED_TRUTH"
+  "routing_rule": "Load only when a task concerns directly discussed third-party physics, quantum foundations, general relativity, black holes, gravastars, gravitational collapse, speculative spacetime constructions, or calibration of mathematical possibility against physical plausibility and observational support.",
+  "nonendorsement_rule": "DIRECT_PUBLIC_COMMENTARY != ENDORSEMENT and ADJACENT_TRUTH != INHERITED_TRUTH and MATHEMATICAL_CONSISTENCY != PHYSICAL_PLAUSIBILITY != OBSERVATIONAL_SUPPORT"
 }

@@ -53,7 +53,7 @@ window.SABINE_RESEARCH_DESK = {
   },
   "projection": {
     "build_timestamp": null,
-    "canonical_fingerprint_sha256": "95675819cd72eb2e381fab487ba93dba31282fdf0f8eaf12650a61e0c83d2012",
+    "canonical_fingerprint_sha256": "3d2fc5d1de662c2fc60039b43fc64678461dd788a1b92a451bf1069744563877",
     "canonical_inputs": [
       {
         "path": "profiles/sabine-public.json",
@@ -69,7 +69,7 @@ window.SABINE_RESEARCH_DESK = {
       },
       {
         "path": "sources/public-sources.json",
-        "sha256": "207a43006f6a200868445ee1fb57f7f9fac445ea4a881deba6f4aaa49371d706"
+        "sha256": "5c5b01bd30c1f709d8e1bcdb281fa972b71d6ebb5a61743ff3ada85cb7b5c44a"
       }
     ],
     "canonical_source_of_truth": "canonical public records in the sabine-gpt repository",
@@ -329,8 +329,8 @@ window.SABINE_RESEARCH_DESK = {
   },
   "sources": {
     "schema_version": "1.0.0",
-    "snapshot_date": "2026-08-18",
-    "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
+    "snapshot_date": "2026-08-20",
+    "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
     "sources": [
       {
         "class": "author_official_public_site",
@@ -393,6 +393,25 @@ window.SABINE_RESEARCH_DESK = {
           "cross_pair_correlation_prediction"
         ],
         "url": "https://arxiv.org/abs/2606.12457v2",
+        "visibility": "public"
+      },
+      {
+        "arxiv": "2509.15302",
+        "arxiv_version": "v2",
+        "class": "journal_and_arxiv",
+        "doi": "10.1103/c6lw-nx7k",
+        "id": "paper.2509.15302",
+        "journal": "Physical Review D 113, L121502 (2026)",
+        "journal_url": "https://journals.aps.org/prd/abstract/10.1103/c6lw-nx7k",
+        "supports": [
+          "gravastar_formation_model",
+          "oppenheimer_snyder_collapse",
+          "de_sitter_core_nucleation",
+          "fine_tuned_separatrix",
+          "compactness_threshold_3_over_8",
+          "horizonless_black_hole_mimicker"
+        ],
+        "url": "https://arxiv.org/abs/2509.15302v2",
         "visibility": "public"
       },
       {

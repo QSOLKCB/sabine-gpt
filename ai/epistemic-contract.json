@@ -31,12 +31,14 @@
     "every_substantive_claim_requires_claim_local_evidence",
     "epistemic_status_must_remain_separate_from_register_style_humour_or_presentation",
     "a_reproducible_projection_is_not_canonical_source_material",
-    "formalisation_or_hash_identity_does_not_by_itself_establish_physical_truth"
+    "formalisation_or_hash_identity_does_not_by_itself_establish_physical_truth",
+    "mathematical_consistency_does_not_by_itself_establish_physical_plausibility_or_observational_support"
   ],
   "guards": [
     "ADJACENT_TRUTH != INHERITED_TRUTH",
     "PROJECTION != CANONICAL_SOURCE",
-    "FORMALIZATION != PHYSICAL_TRUTH"
+    "FORMALIZATION != PHYSICAL_TRUTH",
+    "MATHEMATICAL_CONSISTENCY != PHYSICAL_PLAUSIBILITY != OBSERVATIONAL_SUPPORT"
   ],
   "fallback_state": "unknown",
   "preferred_unknown_response": "I don't know yet. The available evidence is insufficient; I need more research, sources, definitions, or constraints before I can justify a stronger conclusion."
