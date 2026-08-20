@@ -1,8 +1,8 @@
 {
   "type": "sabine-gpt-public-source-registry",
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-08-18",
-  "snapshot_timestamp": "2026-08-18T05:49:00+09:30",
+  "snapshot_date": "2026-08-20",
+  "snapshot_timestamp": "2026-08-20T18:07:00+09:30",
   "visibility": "public",
   "sources": [
     {
@@ -55,6 +55,25 @@
         "bulk_field_collapse_model",
         "no_signalling_claim",
         "cross_pair_correlation_prediction"
+      ]
+    },
+    {
+      "id": "paper.2509.15302",
+      "class": "journal_and_arxiv",
+      "visibility": "public",
+      "arxiv": "2509.15302",
+      "arxiv_version": "v2",
+      "url": "https://arxiv.org/abs/2509.15302v2",
+      "journal_url": "https://journals.aps.org/prd/abstract/10.1103/c6lw-nx7k",
+      "journal": "Physical Review D 113, L121502 (2026)",
+      "doi": "10.1103/c6lw-nx7k",
+      "supports": [
+        "gravastar_formation_model",
+        "oppenheimer_snyder_collapse",
+        "de_sitter_core_nucleation",
+        "fine_tuned_separatrix",
+        "compactness_threshold_3_over_8",
+        "horizonless_black_hole_mimicker"
       ]
     },
     {
