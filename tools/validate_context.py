@@ -24,6 +24,7 @@ REQUIRED = [
     "sources/public-sources.json",
     "profiles/sabine-public.json",
     "research/current-focus.json",
+    "research/adjacent-literature.json",
     "publications/index.json",
 ]
 
@@ -34,6 +35,7 @@ PROVENANCE_REGISTRY = "sources/public-sources.json"
 PROVENANCE_DEPENDENT_RECORDS = {
     "profiles/sabine-public.json",
     "research/current-focus.json",
+    "research/adjacent-literature.json",
     "publications/index.json",
 }
 
@@ -168,6 +170,28 @@ def main() -> None:
         "epistemic contract must preserve the projection/canonical boundary",
     )
 
+    adjacent_doc = load_json("research/adjacent-literature.json")
+    require_timestamp_date(adjacent_doc, "snapshot_date", "snapshot_timestamp", "adjacent-literature index")
+    require(adjacent_doc.get("visibility") == "public", "adjacent-literature index must declare public visibility")
+    adjacent_records = adjacent_doc.get("records", [])
+    adjacent_ids = [item["id"] for item in adjacent_records]
+    require(len(adjacent_ids) == len(set(adjacent_ids)), "duplicate adjacent-literature id")
+    for item in adjacent_records:
+        record_id = item["id"]
+        paper_source = item.get("paper_source")
+        require(paper_source in source_id_set, f"adjacent-literature record has dangling paper source: {record_id} -> {paper_source}")
+        state = item.get("epistemic_state")
+        require(state in epistemic_states, f"adjacent-literature record uses undefined epistemic state: {record_id} -> {state}")
+        require(state == "cached_public_record", f"static adjacent-literature record must be cached_public_record: {record_id}")
+        commentary = item.get("direct_public_commentary")
+        if commentary is not None:
+            require(isinstance(commentary, dict), f"direct_public_commentary must be an object: {record_id}")
+            commentary_source = commentary.get("source")
+            require(commentary_source in source_id_set, f"adjacent commentary has dangling source: {record_id} -> {commentary_source}")
+            commentary_state = commentary.get("epistemic_state")
+            require(commentary_state in epistemic_states, f"adjacent commentary uses undefined epistemic state: {record_id} -> {commentary_state}")
+            require(commentary_state == "cached_public_record", f"static adjacent commentary must be cached_public_record: {record_id}")
+
     publication_doc = load_json("publications/index.json")
     require_timestamp_date(publication_doc, "snapshot_date", "snapshot_timestamp", "publication index")
     publications = publication_doc["publications"]
@@ -236,7 +260,8 @@ def main() -> None:
         "sabine-gpt context valid: "
         f"{len(json_paths)} JSON files + README4AI machine pointer, "
         f"{len(source_ids)} public sources, "
-        f"{len(publication_ids)} selected publications"
+        f"{len(publication_ids)} selected publications, "
+        f"{len(adjacent_ids)} adjacent-literature records"
     )
 
 
